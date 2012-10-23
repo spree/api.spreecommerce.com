@@ -7,10 +7,10 @@ html {
 }
 
 body {
-  font: 13px helvetica,arial,freesans,clean,sans-serif;
+  font: 13px "adelle-1", "adelle-2", Helvetica, Arial, sans-serif;
   line-height: 1.4em;
   background-color: #fff;
-  color: #393939;
+  color: #222;
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -103,12 +103,6 @@ dd + dd {
   margin-bottom: 0;
 }
 
-span.attention,
-p.attention {
-  color: #e98400;
-  font-style: italic;
-}
-
 a img {
   border: 0px;
 }
@@ -173,6 +167,13 @@ a img {
 #header a {
   outline: none;
   text-decoration: none;
+}
+
+/*------------------------------------------------------------------------------
+     Footer
+------------------------------------------------------------------------------*/
+
+#footer {
 }
 
 /*------------------------------------------------------------------------------
@@ -317,152 +318,6 @@ div.sidebar-module ul ul li span {
 
 /* @end */
 
-/*****************************************************************************/
-/*
-/* Footer
-/*
-/*****************************************************************************/
-
-
-
-#footer {
-  position: relative;
-  bottom:0;
-  font-size:13px;
-  color: #636363;
-  margin: 45px 0 0 0;
-}
-
-#footer a:hover {
-  text-decoration: underline;
-}
-
-#footer li {
-  list-style: none;
-}
-
-.footer_inner {
-  width:960px;
-  position: relative;
-  margin: 0 auto;
-}
-
-#footer .upper_footer {
-  min-height: 160px;
-  overflow: hidden;
-  background: url(../images/bg_footer_top.png) #f8f8f8 repeat-x;
-}
-
-#footer #blacktocat {
-  height:130px;
-  width:164px;
-  float:left;
-  background: url(../images/blacktocat.png) top left no-repeat;
-  text-indent: -5000px;
-  margin: 15px 20px 0 0;
-}
-
-#footer #blacktocat_ie {
-  height:130px;
-  width:164px;
-  float:left;
-  background: url(../images/blacktocat.png) no-repeat;
-  text-indent: -5000px;
-  margin: 15px 20px 0 0;
-}
-
-#footer .upper_footer ul.footer_nav {
-  position: relative;
-  float: left;
-  width: 164px;
-  margin: 20px 10px;
-}
-
-#footer .upper_footer ul.footer_nav h4 {
-  margin: 0 0 5px 0;
-  padding-bottom: 5px;
-  border-bottom: thin solid #e1e1e1;
-}
-
-#footer .lower_footer {
-  position: relative;
-  background:url(../images/bg_footer_bottom.png) #fff repeat-x;
-  overflow: hidden;
-  clear:both;
-}
-
-#footer .lower_footer .home {
-  display: block;
-  position: absolute;
-  background: url(../images/footer-logo.png) top left no-repeat;
-  width: 100px;
-  height: 50px;
-  text-indent: -5000px;
-}
-
-#footer .lower_footer .home_ie {
-  display: block;
-  position: absolute;
-  background: url(../images/footer-logo.png) top left no-repeat;
-  width: 100px;
-  height: 50px;
-  text-indent: -5000px;
-}
-
-#footer .lower_footer #legal {
-  float: left;
-  width: 500px;
-  height: 50px;
-  line-height: 8px;
-  margin: 25px 0 0 17px;
-}
-
-#footer .lower_footer #legal #legal_links {
-  margin-left: 177px;
-}
-
-#footer .lower_footer div ul {
-  float: left;
-  text-indent: none;
-  display:inline;
-  margin-top: 15px;
-
-}
-
-#footer .lower_footer div ul li {
-  display:inline;
-  float: left;
-  margin:  0 10px 0 0;
-}
-
-#footer .lower_footer div p {
-  display:inline;
-  float:left;
-  clear: both;
-  margin: 10px 0 0 177px;
-}
-
-#footer .lower_footer .sponsor {
-  width: 295px;
-  float: right;
-  margin-top: 35px;
-  padding-bottom: 25px;
-}
-
-#footer .lower_footer .sponsor .logo {
- float:left;
- margin: 0 10px 0 0;
-}
-
-#footer .lower_footer .sponsor a {
-  color: #000;
-}
-
-/* end */
-
-/*------------------------------------------------------------------------------
-    Not Footer
-------------------------------------------------------------------------------*/
 #wrapper {
   padding: 20px 25px;
   overflow:hidden;
@@ -558,18 +413,18 @@ p code {
   padding-bottom: 1em;
 }
 
-  .change .meta {
-    font-size: 16px;
-    padding-bottom: 1em;
-  }
+.change .meta {
+  font-size: 16px;
+  padding-bottom: 1em;
+}
 
-    .change .who_when .author {
-      color: #eee;
-    }
+.change .who_when .author {
+  color: #eee;
+}
 
-    .change .who_when .published {
-      color: #ccc;
-    }
+.change .who_when .published {
+  color: #ccc;
+}
 
 /* @end */
 
