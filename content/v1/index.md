@@ -29,3 +29,20 @@ Alternatively, you may also pass through the token as a parameter in the request
     curl http://example.com/api/products.json?token=YOUR_KEY_HERE
 
 The token allows the request to assume the same level of permissions as the actual user to whom the token belongs.
+
+## Error Messages
+
+You may encounter the follow error messages when using the API.
+
+### Not Found
+
+<%= not_found %>
+
+### Authorization Failure
+
+<%= authorization_failure %>
+
+### Invalid API Key
+
+<%= headers 401 %>
+<%= json(:error => "Invalid API key ([key]) specified.") %>
