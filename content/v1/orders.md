@@ -112,7 +112,7 @@ With an order number of R1234567, updating an address would be done like this:
 
     PUT /api/orders/:number/address?shipping_address[firstname]...
 
-The address parameters are:
+The valid address parameters are:
 
 * firstname
 * lastname

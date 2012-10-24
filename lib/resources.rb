@@ -172,35 +172,78 @@ module Spree
         }
       }
 
-      ORDER = 
-        { "order" => 
-          {
-            "id"=>1069267076,
-            "number"=>"R335381310",
-            "item_total"=>"0.0",
-            "total"=>"0.0",
-            "state"=>"cart",
-            "adjustment_total"=>"0.0",
-            "user_id"=>nil,
-            "created_at"=>"2012-10-24T01:02:25Z",
-            "updated_at"=>"2012-10-24T01:02:25Z",
-            "completed_at"=>nil,
-            "payment_total"=>"0.0",
-            "shipment_state"=>nil,
-            "payment_state"=>nil,
-            "email"=>nil,
-            "special_instructions"=>nil
-          }
+    ORDER = 
+      { "order" => 
+        {
+          "id"=>1069267076,
+          "number"=>"R335381310",
+          "item_total"=>"0.0",
+          "total"=>"0.0",
+          "state"=>"cart",
+          "adjustment_total"=>"0.0",
+          "user_id"=>nil,
+          "created_at"=>"2012-10-24T01:02:25Z",
+          "updated_at"=>"2012-10-24T01:02:25Z",
+          "completed_at"=>nil,
+          "payment_total"=>"0.0",
+          "shipment_state"=>nil,
+          "payment_state"=>nil,
+          "email"=>nil,
+          "special_instructions"=>nil
         }
+      }
 
-      SHIPPING_METHOD =
-        { "shipping_method" =>
-          {
-            "id" => "1",
-            "name" => "UPS Ground",
-            "cost" => "10.00"
-          }
+    SHIPPING_METHOD =
+      { "shipping_method" =>
+        {
+          "id" => "1",
+          "name" => "UPS Ground",
+          "cost" => "10.00"
         }
+      }
+
+    COUNTRY =
+      { "country" =>
+        {
+          "id"=>1,
+          "iso_name"=>"UNITED STATES",
+          "iso"=>"US",
+          "iso3"=>"USA",
+          "name"=>"United States",
+          "numcode"=>1
+        }
+      }
+
+    STATE =
+      { "state" =>
+        {
+          "abbr"=>"NY",
+          "country_id"=>1,
+          "id"=>1,
+          "name"=>"New York"
+        }
+      }
+
+    ADDRESS =
+      {"address"=>
+        { 
+          "id"=>1,
+          "firstname"=>"Spree"
+          "lastname"=>"Commerce",
+          "address1"=>"1 Someplace Lane",
+          "address2"=>"Suite 1",
+          "city"=>"Bethesda",
+          "zipcode"=>"16804",
+          "phone"=>"123.4567.890",
+          "company"=>nil,
+          "alternative_phone"=>nil,
+          "country_id"=>1,
+          "state_id"=>1
+          "state_name"=>nil,
+          "country"=> COUNTRY,
+          "state" => STATE
+        }
+      }
     end
 end
 
