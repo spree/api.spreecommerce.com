@@ -202,33 +202,29 @@ module Spree
         }
       }
 
-    COUNTRY =
-      { "country" =>
-        {
-          "id"=>1,
-          "iso_name"=>"UNITED STATES",
-          "iso"=>"US",
-          "iso3"=>"USA",
-          "name"=>"United States",
-          "numcode"=>1
-        }
+    ADDRESS_COUNTRY =
+      {
+        "id"=>1,
+        "iso_name"=>"UNITED STATES",
+        "iso"=>"US",
+        "iso3"=>"USA",
+        "name"=>"United States",
+        "numcode"=>1
       }
 
-    STATE =
-      { "state" =>
-        {
-          "abbr"=>"NY",
-          "country_id"=>1,
-          "id"=>1,
-          "name"=>"New York"
-        }
+    ADDRESS_STATE =
+      {
+        "abbr"=>"NY",
+        "country_id"=>1,
+        "id"=>1,
+        "name"=>"New York"
       }
 
     ADDRESS =
       {"address"=>
         { 
           "id"=>1,
-          "firstname"=>"Spree"
+          "firstname"=>"Spree",
           "lastname"=>"Commerce",
           "address1"=>"1 Someplace Lane",
           "address2"=>"Suite 1",
@@ -238,12 +234,35 @@ module Spree
           "company"=>nil,
           "alternative_phone"=>nil,
           "country_id"=>1,
-          "state_id"=>1
+          "state_id"=>1,
           "state_name"=>nil,
-          "country"=> COUNTRY,
-          "state" => STATE
+          "country"=> ADDRESS_COUNTRY,
+          "state" => ADDRESS_STATE
         }
       }
+
+      COUNTRY_STATE = { "state"=> ADDRESS_STATE }
+
+      COUNTRY =
+        {
+          "id"=>1,
+          "iso_name"=>"UNITED STATES",
+          "iso"=>"US",
+          "iso3"=>"USA",
+          "name"=>"United States",
+          "numcode"=>1,
+          "states"=> [COUNTRY_STATE]
+        }
+
+        
+
+      STATE =
+        {
+          "abbr"=>"NY",
+          "country_id"=>1,
+          "id"=>1,
+          "name"=>"New York"
+        }
     end
 end
 
