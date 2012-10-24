@@ -171,8 +171,37 @@ module Spree
           "product_properties"=> [PRODUCT_PROPERTY]
         }
       }
-    end
 
+      ORDER = 
+        { "order" => 
+          {
+            "id"=>1069267076,
+            "number"=>"R335381310",
+            "item_total"=>"0.0",
+            "total"=>"0.0",
+            "state"=>"cart",
+            "adjustment_total"=>"0.0",
+            "user_id"=>nil,
+            "created_at"=>"2012-10-24T01:02:25Z",
+            "updated_at"=>"2012-10-24T01:02:25Z",
+            "completed_at"=>nil,
+            "payment_total"=>"0.0",
+            "shipment_state"=>nil,
+            "payment_state"=>nil,
+            "email"=>nil,
+            "special_instructions"=>nil
+          }
+        }
+
+      SHIPPING_METHOD =
+        { "shipping_method" =>
+          {
+            "id" => "1",
+            "name" => "UPS Ground",
+            "cost" => "10.00"
+          }
+        }
+    end
 end
 
 include Spree::Resources::Helpers
