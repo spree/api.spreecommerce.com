@@ -3,7 +3,7 @@ require 'yajl/json_gem'
 require 'stringio'
 require 'cgi'
 
-module GitHub
+module Spree
   module Resources
     module Helpers
       STATUSES = {
@@ -167,4 +167,4 @@ module GitHub
 
 end
 
-include GitHub::Resources::Helpers
+include Spree::Resources::Helpers
