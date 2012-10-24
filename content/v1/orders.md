@@ -65,7 +65,7 @@ Orders through the API will only be visible to admins and the users who own them
 ### Successful Response
 
 <%= headers 200 %>
-<%= json :product %>
+<%= json :order_show %>
 
 ### Not Found Response
 

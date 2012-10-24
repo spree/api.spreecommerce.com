@@ -193,6 +193,27 @@ module Spree
         }
       }
 
+    line_item_variant = VARIANT["variant"]
+    line_item_variant.delete("option_values")
+
+    LINE_ITEM =
+      {
+        "id"=>1,
+        "quantity"=>1,
+        "price"=>"19.99",
+        "variant_id"=>1013589413,
+        "variant" => line_item_variant
+      }
+
+    PAYMENT = {}
+    SHIPMENT = {}
+
+    ORDER_SHOW = ORDER.merge({
+      "line_items" => [LINE_ITEM],
+      "payments" => [PAYMENT],
+      "shipments" => [SHIPMENT]
+    })
+
     SHIPPING_METHOD =
       { "shipping_method" =>
         {
