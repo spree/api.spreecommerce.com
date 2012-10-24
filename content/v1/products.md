@@ -11,11 +11,11 @@ title: Products | GitHub API
 
 List products visible to the authenticated user. If the user is not an admin, they will only be able to see products which have an `available_on` date in the past. If the user is an admin, they are able to see all products.
 
-    GET /api/v1/products
+    GET /api/products
 
 Products are paginated and can be iterated through by passing along a `page` parameter:
 
-    GET /api/v1/products?page=2
+    GET /api/products?page=2
 
 ### Parameters
 
@@ -73,7 +73,7 @@ Note that the API will attempt a permalink lookup before an ID lookup.
 
 You can learn about the potential attributes (required and non-required) for a product by making this request:
 
-     GET /api/v1/products/new
+     GET /api/products/new
 
 ### Response
 

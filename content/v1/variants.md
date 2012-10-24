@@ -11,13 +11,13 @@ title: Variants | GitHub API
 
 To return a paginated list of all variants within the store, make this request:
 
-    GET /api/v1/variants
+    GET /api/variants
 
 You can limit this to showing the variants for a particular product by passing through a product id:
 
-    GET /api/v1/products/1/variants
+    GET /api/products/1/variants
     # or
-    GET /api/v1/variants?product_id=1
+    GET /api/variants?product_id=1
 
 ### Parameters
 
@@ -56,7 +56,7 @@ To view the details for a single variant, make a request using that variant’s 
 
 You can learn about the potential attributes (required and non-required) for a variant by making this request:
 
-     GET /api/v1/products/1/variants/new
+     GET /api/products/1/variants/new
 
 ### Response
 
