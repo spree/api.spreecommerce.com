@@ -60,14 +60,14 @@ You may also query by the product’s id attribute:
 
 Note that the API will attempt a permalink lookup before an ID lookup.
 
-For the attributes contained in this output, please see the top of this section.
-
-If a product cannot be found, a 404 response will be returned.
-
-### Response
+### Successful Response
 
 <%= headers 200 %>
 <%= json :product %>
+
+### Not Found Response
+
+<%= headers 404 %>
 
 ## Pre-creation of a product
 
