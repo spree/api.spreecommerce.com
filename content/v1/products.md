@@ -39,7 +39,7 @@ end %>
 
 To search for a particular product, make a request like this:
 
-    GET /api/products/search.json?q[name_cont]=Spree
+    GET /api/products/search?q[name_cont]=Spree
 
 The searching API is provided through the Ransack gem which Spree depends on. The `name_cont` here is called a predicate, and you can learn more about them by reading about [Predicates on the Ransack wiki](https://github.com/ernie/ransack/wiki/Basic-Searching).
 
@@ -52,11 +52,11 @@ The searching API is provided through the Ransack gem which Spree depends on. Th
 
 To view the details for a single product, make a request using that product’s permalink:
 
-    GET /api/products/a-product.json
+    GET /api/products/a-product
 
 You may also query by the product’s id attribute:
 
-    GET /api/products/1.json
+    GET /api/products/1
 
 Note that the API will attempt a permalink lookup before an ID lookup.
 
@@ -92,11 +92,11 @@ You can learn about the potential attributes (required and non-required) for a p
 
 To create a new product through the API, make this request with the necessary parameters:
 
-    POST /api/products/create.json
+    POST /api/products
 
 For instance, a request to create a new product called “Headphones” with a price of $100 would look like this:
 
-    POST /api/products/create.json?product[name]=Headphones&product[price]=100
+    POST /api/products?product[name]=Headphones&product[price]=100
 
 ### Successful response
 
@@ -119,11 +119,11 @@ For instance, a request to create a new product called “Headphones” with a p
 
 To update a product’s details, make this request with the necessary parameters:
 
-    PUT /api/products/a-product.json
+    PUT /api/products/a-product
 
 For instance, to update a product’s name, send it through like this:
 
-    PUT /api/products/a-product.json?product[name]=Headphones
+    PUT /api/products/a-product?product[name]=Headphones
 
 ### Successful response
 
@@ -146,7 +146,7 @@ For instance, to update a product’s name, send it through like this:
 
 To delete a product, make this request:
 
-    DELETE /api/products/a-product.json
+    DELETE /api/products/a-product
 
 This request, much like a typical product “deletion” through the admin interface, will not actually remove the record from the database. It simply sets the `deleted_at` field to the current time on the product, as well as all of that product’s variants.
 
