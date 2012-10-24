@@ -1,5 +1,5 @@
 ---
-title: Address | GitHub API
+title: Address | Spree API
 ---
 
 # Address API

@@ -1,5 +1,5 @@
 ---
-title: Products | GitHub API
+title: Products | Spree API
 ---
 
 # Products API

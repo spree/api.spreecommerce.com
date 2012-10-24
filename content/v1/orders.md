@@ -1,5 +1,5 @@
 ---
-title: Orders | GitHub API
+title: Orders | Spree API
 ---
 
 # Orders API
