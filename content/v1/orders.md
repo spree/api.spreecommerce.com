@@ -27,7 +27,7 @@ page
 ### Response
 
 <%= headers 200 %>
-<%= json(:order) do |h|
+<%= json(:stripped_order) do |h|
 { :orders => [h],
   :count => 25,
   :pages => 5,

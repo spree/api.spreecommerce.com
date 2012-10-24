@@ -172,10 +172,23 @@ module Spree
         }
       }
 
+    PAYMENT_METHOD = {}
+
+    ORDER_PAYMENT =
+      {"payment"=>
+        {
+          "id"=>1,
+          "amount"=>"10.00",
+          "state"=>"checkout",
+          "payment_method_id"=>1,
+          "payment_method" => PAYMENT_METHOD
+        }
+      }
+
     ORDER = 
       { "order" => 
         {
-          "id"=>1069267076,
+          "id"=>1,
           "number"=>"R335381310",
           "item_total"=>"0.0",
           "total"=>"0.0",
@@ -189,9 +202,16 @@ module Spree
           "shipment_state"=>nil,
           "payment_state"=>nil,
           "email"=>nil,
-          "special_instructions"=>nil
+          "special_instructions"=>nil,
+          "payments" => [ORDER_PAYMENT]
         }
       }
+
+    stripped_order = ORDER["order"]
+    stripped_order.delete("payments")
+    stripped_order.delete("shipments")
+    stripped_order.delete("line_items")
+    STRIPPED_ORDER = { "order" => stripped_order }
 
     line_item_variant = VARIANT["variant"]
     line_item_variant.delete("option_values")
@@ -201,11 +221,26 @@ module Spree
         "id"=>1,
         "quantity"=>1,
         "price"=>"19.99",
-        "variant_id"=>1013589413,
+        "variant_id"=>1,
         "variant" => line_item_variant
       }
 
-    PAYMENT = {}
+    PAYMENT =
+      {"payment"=>
+        {
+          "id"=>1,
+          "source_type"=>"Spree::CreditCard",
+          "source_id"=>1,
+          "amount"=>"10.00",
+          "payment_method_id"=>1,
+          "response_code"=>nil,
+          "state"=>"checkout",
+          "avs_response"=>nil,
+          "created_at"=>"2012-10-24T23:26:23Z",
+          "updated_at"=>"2012-10-24T23:26:23Z"
+        }
+      }
+
     SHIPMENT = {}
 
     ORDER_SHOW = ORDER.merge({
