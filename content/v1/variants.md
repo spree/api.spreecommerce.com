@@ -50,7 +50,7 @@ To view the details for a single variant, make a request using that variant’s 
 
 ### Not Found Response
 
-<%= headers 404 %>
+<%= not_found %>
 
 ## Pre-creation of a variant
 

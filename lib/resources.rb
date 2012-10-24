@@ -82,6 +82,14 @@ module Spree
         warning("This action is only accessible by an admin user.") 
       end
 
+      def not_found
+        headers(404) + json(:error => "The resource you were looking for could not be found.")
+      end
+
+      def authorization_failure
+        headers(401) + json(:error => "You are not authorized to perform that action.")
+      end
+
       def text_html(response, status, head = {})
         hs = headers(status, head.merge('Content-Type' => 'text/html'))
         res = CGI.escapeHTML(response)

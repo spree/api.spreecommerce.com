@@ -67,7 +67,7 @@ Note that the API will attempt a permalink lookup before an ID lookup.
 
 ### Not Found Response
 
-<%= headers 404 %>
+<%= not_found %>
 
 ## Pre-creation of a product
 
