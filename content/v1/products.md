@@ -20,7 +20,7 @@ Products are paginated and can be iterated through by passing along a `page` par
 ### Parameters
 
 show\_deleted
-: **boolean** - `true` to show deleted products, `false` to hide them. Default: `false`.
+: **boolean** - `true` to show deleted products, `false` to hide them. Default: `false`. **Only available to users with an admin role.**
 
 page
 : The page number of products to display.
