@@ -202,15 +202,8 @@ module Spree
           "payment_state"=>nil,
           "email"=>nil,
           "special_instructions"=>nil,
-          "payments" => [ORDER_PAYMENT]
         }
       }
-
-    stripped_order = ORDER["order"]
-    stripped_order.delete("payments")
-    stripped_order.delete("shipments")
-    stripped_order.delete("line_items")
-    STRIPPED_ORDER = { "order" => stripped_order }
 
     line_item_variant = VARIANT["variant"]
     line_item_variant.delete("option_values")
