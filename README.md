@@ -1,6 +1,6 @@
-# developer.github.com
+# developer.spreecommerce.com
 
-This is a GitHub API resource built with [nanoc][nanoc].
+This is a Spree API resource built with [nanoc][nanoc].
 
 All submissions are welcome. To submit a change, fork this repo, commit your changes, and send us a [pull request](http://help.github.com/send-pull-requests/).
 
@@ -53,9 +53,9 @@ We specify the JSON responses in ruby so that we don't have to write
 them by hand all over the docs.  You can render the JSON for a resource
 like this:
 
-    <%= json :issue %>
+    <%= json :product %>
 
-This looks up `GitHub::Resources::ISSUE` in `lib/resources.rb`.
+This looks up `Spree::Resources::PRODUCT` in `lib/resources.rb`.
 
 Some actions return arrays.  You can modify the JSON by passing a block:
 
@@ -82,19 +82,17 @@ smart enough not to try to compile unchanged files:
     $ nanoc compile
     Loading site data...
     Compiling site...
-       identical  [0.00s]  output/css/960.css
-       identical  [0.00s]  output/css/pygments.css
-       identical  [0.00s]  output/css/reset.css
-       identical  [0.00s]  output/css/styles.css
-       identical  [0.00s]  output/css/uv_active4d.css
-          update  [0.28s]  output/index.html
-          update  [1.31s]  output/v3/gists/comments/index.html
-          update  [1.92s]  output/v3/gists/index.html
-          update  [0.25s]  output/v3/issues/comments/index.html
-          update  [0.99s]  output/v3/issues/labels/index.html
-          update  [0.49s]  output/v3/issues/milestones/index.html
-          update  [0.50s]  output/v3/issues/index.html
-          update  [0.05s]  output/v3/index.html
+      create  [0.03s]  output/changes/index.html
+      create  [0.00s]  output/CNAME
+      create  [0.02s]  output/changes.atom
+      create  [0.01s]  output/index.html
+      create  [0.09s]  output/v1/addresses/index.html
+      create  [0.01s]  output/v1/changelog/index.html
+      create  [0.02s]  output/v1/countries/index.html
+      create  [0.03s]  output/v1/index.html
+      create  [0.08s]  output/v1/order/line_items/index.html
+      create  [0.15s]  output/v1/order/payments/index.html
+      create  [0.02s]  output/v1/order/shipments/index.html
 
     Site compiled in 5.81s.
 
