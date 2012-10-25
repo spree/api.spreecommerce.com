@@ -241,22 +241,32 @@ module Spree
         }
       }
 
-    SHIPMENT = {}
+    SHIPPING_METHOD =
+      {
+        "name" => "UPS Ground",
+        "zone_id" => 1,
+        "shipping_category_id" => 1
+      }
+
+    SHIPMENT =
+      { "shipment"=>
+        {
+          "id"=>1,
+          "tracking"=>nil,
+          "number"=>"H123456789",
+          "cost"=>"5.0",
+          "shipped_at"=>nil,
+          "state"=>"pending",
+          "order_id"=>"R1234567",
+          "shipping_method"=> SHIPPING_METHOD
+        }
+      }
 
     ORDER_SHOW = ORDER.merge({
       "line_items" => [LINE_ITEM],
       "payments" => [PAYMENT],
       "shipments" => [SHIPMENT]
     })
-
-    SHIPPING_METHOD =
-      { "shipping_method" =>
-        {
-          "id" => "1",
-          "name" => "UPS Ground",
-          "cost" => "10.00"
-        }
-      }
 
     ADDRESS_COUNTRY =
       {
