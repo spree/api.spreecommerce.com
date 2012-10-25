@@ -33,6 +33,8 @@ like this:
 
 ## Creating a taxon
 
+<%= admin_only %>
+
 To create a taxon, make a request like this:
 
     POST /api/taxonomies/1/taxons
@@ -49,6 +51,8 @@ To create a new taxon with the name "Brands", make this request:
 
 ## Updating a taxon
 
+<%= admin_only %>
+
 To update a taxon, make a request like this:
 
     PUT /api/taxonomies/1/taxons/1
@@ -63,6 +67,8 @@ For example, to update the taxon's name to "Brand", make this request:
 <%= json(:taxon_with_children) %>
 
 ## Deleting a taxon
+
+<%= admin_only %>
 
 To delete a taxon, make a request like this:
 
