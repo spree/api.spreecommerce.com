@@ -167,7 +167,6 @@ module Spree
           "meta_keywords"=>nil,
           "variants"=> [VARIANT],
           "images"=> [IMAGE],
-          "option_types"=>[],
           "product_properties"=> [PRODUCT_PROPERTY]
         }
       }
