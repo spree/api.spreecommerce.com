@@ -28,4 +28,18 @@ To update the information for a line item, make a request like this:
 
 This request will update the line item with the ID of 1 for the order, updating the line item's `variant_id` to 1, and its `quantity` 1.
 
+### Response
+
+<%= headers 200 %>
+<%= json(:line_item) %>
+
+## Deleting a line item
+
+To delete a line item, make a request like this:
+
+    DELETE /api/orders/R1234567/line_items/1
+
+### Response
+
+<%= headers 204 %>
 
