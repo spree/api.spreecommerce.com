@@ -28,7 +28,7 @@ To get information for a single taxonomy -- including its root node and the imme
 ### Response
 
 <%= headers 200 %>
-<%= json(:taxonomy) { |h| [h] } %>
+<%= json(:taxonomy) %>
 
 ## Creating a taxonomy
 
