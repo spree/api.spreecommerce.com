@@ -340,10 +340,19 @@ module Spree
         }
       }
 
-    secondary_taxon = TAXON
-    secondary_taxon["taxon"]["name"] = "T-Shirts"
-    secondary_taxon["taxon"]["permalink"] = "brands/ruby-on-rails/t-shirts"
-    TAXON_WITH_CHILDREN = TAXON["taxon"].merge(:taxons => [secondary_taxon])
+    SECONDARY_TAXON =
+      { "taxon"=>
+        {
+          "id"=>3,
+          "name"=>"T-Shirts",
+          "permalink"=>"brands/ruby-on-rails/t-shirts",
+          "position"=>1,
+          "parent_id"=>2,
+          "taxonomy_id"=>1
+        }
+      }
+
+    TAXON_WITH_CHILDREN = TAXON["taxon"].merge(:taxons => [SECONDARY_TAXON])
     TAXON_WITHOUT_CHILDREN = TAXON["taxon"].merge(:taxons => [])
 
     TAXONOMY =
