@@ -327,6 +327,43 @@ module Spree
         "id"=>1,
         "name"=>"New York"
       }
+
+    TAXON = 
+      { "taxon"=>
+        {
+          "id"=>2,
+          "name"=>"Ruby on Rails",
+          "permalink"=>"brands/ruby-on-rails",
+          "position"=>1,
+          "parent_id"=>1,
+          "taxonomy_id"=>1
+        }
+      }
+
+    secondary_taxon = TAXON
+    secondary_taxon["taxon"]["name"] = "T-Shirts"
+    secondary_taxon["taxon"]["permalink"] = "brands/ruby-on-rails/t-shirts"
+    TAXON_WITH_CHILDREN = TAXON["taxon"].merge(:taxons => [secondary_taxon])
+    TAXON_WITHOUT_CHILDREN = TAXON["taxon"].merge(:taxons => [])
+
+    TAXONOMY =
+      { "taxonomy"=>
+       {
+         "id"=>1,
+         "name"=>"Brand",
+         "root"=> TAXON_WITH_CHILDREN
+       }
+      }
+
+    NEW_TAXONOMY =
+      { "taxonomy" =>
+        {
+          "id" => 1,
+          "name" => "Brand",
+          "root" => TAXON_WITHOUT_CHILDREN
+        }
+      }
+
     end
 end
 
