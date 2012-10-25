@@ -171,7 +171,15 @@ module Spree
         }
       }
 
-    PAYMENT_METHOD = {}
+    PAYMENT_METHOD = 
+      { "payment_method" =>
+        {
+          "id"=>732545999,
+          "name"=>"Check",
+          "description"=>"Pay by check."
+        }
+      }
+
 
     ORDER_PAYMENT =
       {"payment"=>
