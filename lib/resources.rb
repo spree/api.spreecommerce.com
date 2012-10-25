@@ -307,28 +307,26 @@ module Spree
         }
       }
 
-      COUNTRY_STATE = { "state"=> ADDRESS_STATE }
+    COUNTRY_STATE = { "state"=> ADDRESS_STATE }
 
-      COUNTRY =
-        {
-          "id"=>1,
-          "iso_name"=>"UNITED STATES",
-          "iso"=>"US",
-          "iso3"=>"USA",
-          "name"=>"United States",
-          "numcode"=>1,
-          "states"=> [COUNTRY_STATE]
-        }
+    COUNTRY =
+      {
+        "id"=>1,
+        "iso_name"=>"UNITED STATES",
+        "iso"=>"US",
+        "iso3"=>"USA",
+        "name"=>"United States",
+        "numcode"=>1,
+        "states"=> [COUNTRY_STATE]
+      }
 
-        
-
-      STATE =
-        {
-          "abbr"=>"NY",
-          "country_id"=>1,
-          "id"=>1,
-          "name"=>"New York"
-        }
+    STATE =
+      {
+        "abbr"=>"NY",
+        "country_id"=>1,
+        "id"=>1,
+        "name"=>"New York"
+      }
     end
 end
 
