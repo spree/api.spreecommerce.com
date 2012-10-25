@@ -373,6 +373,25 @@ module Spree
         }
       }
 
+    ZONE_MEMBER =
+      { "zone_member" =>
+        {
+          "id"=>1,
+          "name"=>"United States",
+          "zoneable_type"=>"Spree::Country",
+          "zoneable_id"=>1,
+        }
+      }
+
+    ZONE =
+      {"zone"=>
+        {
+          "id"=>1,
+          "name"=>"America",
+          "description"=>"The US",
+          "zone_members"=> [ZONE_MEMBER]
+        }
+      }
     end
 end
 
