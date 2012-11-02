@@ -9,8 +9,8 @@ title: Taxonomies | Spree API
 
 ## List taxonomies 
 
-To get a list of all the taxonomies -- including their root nodes and the
-immediate children for the root node -- , make a request like this:
+To get a list of all the taxonomies, including their root nodes and the
+immediate children for the root node, make a request like this:
 
     GET /api/taxonomies
 
@@ -21,7 +21,7 @@ immediate children for the root node -- , make a request like this:
 
 ## A single taxonomy
 
-To get information for a single taxonomy -- including its root node and the immediate children of the root node --, make a request like this:
+To get information for a single taxonomy, including its root node and the immediate children of the root node, make a request like this:
 
      GET /api/taxonomies/1
 
@@ -38,12 +38,12 @@ To create a taxonomy, make a request like this:
 
      POST /api/taxonomies
 
-For instance, if you want to create a taxonomy with the name "Brands", make
+For instance, if you want to create a taxonomy with the name \"Brands\", make
 this request:
 
      POST /api/taxonomies?taxonomy[name]=Brand
 
-If you're creating a taxonomy without a root taxon, a root taxon will automatically be
+If you\'re creating a taxonomy without a root taxon, a root taxon will automatically be
 created for you with the same name as the taxon.
 
 ## Response
@@ -59,7 +59,7 @@ To update a taxonomy, make a request like this:
 
      PUT /api/taxonomies/1
 
-For instance, to update a taxonomy's name, make this request:
+For instance, to update a taxonomy\'s name, make this request:
 
      PUT /api/taxonomies/1?taxonomy[name]=Brand
 

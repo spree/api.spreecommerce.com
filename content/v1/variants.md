@@ -39,7 +39,7 @@ end %>
 
 ## A single variant
 
-To view the details for a single variant, make a request using that variant’s id, along with its `product_id`:
+To view the details for a single variant, make a request using that variant\'s id, along with its `product_id`:
 
     GET /api/products/1/variants/1
 
@@ -98,11 +98,11 @@ For instance, a request to create a new variant with a SKU of 12345 and a price 
 
 <%= admin_only %>
 
-To update a variants’s details, make this request with the necessary parameters:
+To update a variant\'s details, make this request with the necessary parameters:
 
     PUT /api/products/1/variants/2
 
-For instance, to update a variant's SKU, send it through like this:
+For instance, to update a variant\'s SKU, send it through like this:
 
     PUT /api/products/1/variants/2?variant[sku]=12345
 
@@ -127,7 +127,7 @@ To delete a variant, make this request:
 
     DELETE /api/products/1/variants/2
 
-This request, much like a typical variant “deletion” through the admin interface, will not actually remove the record from the database. It simply sets the `deleted_at` field to the current time on the variant.
+This request, much like a typical variant \"deletion\" through the admin interface, will not actually remove the record from the database. It simply sets the `deleted_at` field to the current time on the variant.
 
 <%= headers 204 %>
 

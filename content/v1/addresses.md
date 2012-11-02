@@ -24,7 +24,7 @@ To update an address, make a request like this:
 
     PUT /api/address/1?address[firstname]=Ryan
 
-This request will update the `firstname` field for an address to the value of "Ryan"
+This request will update the `firstname` field for an address to the value of \"Ryan\"
 
 Valid address fields are:
 

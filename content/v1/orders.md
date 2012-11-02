@@ -56,7 +56,7 @@ end %>
 
 ## A single order
 
-To view the details for a single product, make a request using that order’s number:
+To view the details for a single product, make a request using that order\'s number:
 
     GET /api/orders/R123456789
 
@@ -81,7 +81,7 @@ To create a new order through the API, make this request:
 
     POST /api/orders
 
-If you wish to create an order with a line item matching to a variant who’s ID is “1” and quantity is 5, make this request:
+If you wish to create an order with a line item matching to a variant whose ID is \"1\" and quantity is 5, make this request:
 
     POST /api/orders?order[line_items][0][variant_id]=1&order[line_items][0][quantity]=5
 
@@ -134,7 +134,7 @@ end %>
 
 ## Selecting a delivery method
 
-To choose a delivery method for the order, pass along one ID from the `shipping_methods` response that you would receive from making a request to update the order’s address, or by making another request to `GET /api/orders/R1234567` while the order is in the “delivery” state.
+To choose a delivery method for the order, pass along one ID from the `shipping_methods` response that you would receive from making a request to update the order\'s address, or by making another request to `GET /api/orders/R1234567` while the order is in the \"delivery\" state.
 
 Make a request like this to select the delivery method:
 
@@ -144,10 +144,10 @@ Upon a successful request, the order will transition to the `payment` state.
 
 ## Emptying an Order
 
-To empty an order's cart, make this request:
+To empty an order\'s cart, make this request:
 
     PUT /api/orders/R1234567/empty
 
-All line items will be removed from the cart and the order's information will
+All line items will be removed from the cart and the order\'s information will
 be cleared. Inventory that was previously depleted by this order will be
 repleted.
