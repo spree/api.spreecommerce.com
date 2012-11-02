@@ -148,7 +148,7 @@ To delete a product, make this request:
 
     DELETE /api/products/a-product
 
-This request, much like a typical product “deletion” through the admin interface, will not actually remove the record from the database. It simply sets the `deleted_at` field to the current time on the product, as well as all of that product’s variants.
+This request, much like a typical product "deletion" through the admin interface, will not actually remove the record from the database. It simply sets the `deleted_at` field to the current time on the product, as well as all of that product’s variants.
 
 <%= headers 204 %>
 
