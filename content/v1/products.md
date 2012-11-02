@@ -50,11 +50,11 @@ The searching API is provided through the Ransack gem which Spree depends on. Th
 
 ## A single product
 
-To view the details for a single product, make a request using that product’s permalink:
+To view the details for a single product, make a request using that product\'s permalink:
 
     GET /api/products/a-product
 
-You may also query by the product’s id attribute:
+You may also query by the product\'s id attribute:
 
     GET /api/products/1
 
@@ -94,7 +94,7 @@ To create a new product through the API, make this request with the necessary pa
 
     POST /api/products
 
-For instance, a request to create a new product called “Headphones” with a price of $100 would look like this:
+For instance, a request to create a new product called \"Headphones\" with a price of $100 would look like this:
 
     POST /api/products?product[name]=Headphones&product[price]=100
 
@@ -117,11 +117,11 @@ For instance, a request to create a new product called “Headphones” with a p
 
 <%= admin_only %>
 
-To update a product’s details, make this request with the necessary parameters:
+To update a product\'s details, make this request with the necessary parameters:
 
     PUT /api/products/a-product
 
-For instance, to update a product’s name, send it through like this:
+For instance, to update a product\'s name, send it through like this:
 
     PUT /api/products/a-product?product[name]=Headphones
 
@@ -148,7 +148,7 @@ To delete a product, make this request:
 
     DELETE /api/products/a-product
 
-This request, much like a typical product "deletion" through the admin interface, will not actually remove the record from the database. It simply sets the `deleted_at` field to the current time on the product, as well as all of that product’s variants.
+This request, much like a typical product \"deletion\" through the admin interface, will not actually remove the record from the database. It simply sets the `deleted_at` field to the current time on the product, as well as all of that product\'s variants.
 
 <%= headers 204 %>
 
