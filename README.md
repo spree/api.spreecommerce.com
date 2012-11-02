@@ -1,4 +1,4 @@
-# developer.spreecommerce.com
+# api.spreecommerce.com
 
 This is a Spree API resource built with [nanoc][nanoc].
 
@@ -111,7 +111,7 @@ One thing: remember to add trailing slashes to all nanoc links!
 
 ## Deploy
 
-    $ rake publish
+    $ bundle exec cap deploy
 
 ## TODO
 
