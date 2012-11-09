@@ -13,12 +13,51 @@ title: Product Properties | Spree API
 
 List 
 
+Retrieve a list of all product properties for a product by making this request:
+
     GET /api/products/1/product_properties
+
+Product properties are paginated and can be iterated through by passing along a `page` parameter:
+
+    GET /api/products/1/product_propeties?page=2
+
+### Parameters
+
+page
+: The page number of product property to display.
+
+per_page
+: The number of product properties to return per page
 
 ### Response
 
 <%= headers 200 %>
-<%= json(:product_property) { |h| { :product_properties => [h] } } %>
+<%= json(:product_property) do |h| 
+{ :product_properties => [h],
+  :count => 10,
+  :pages => 2,
+  :current_page => 1 }
+end %>
+
+## Searching product properties
+
+To search for a particular product property, make a request like this:
+
+    GET /api/products/1/product_properties?q[property_name_cont]=bag
+
+The searching API is provided through the Ransack gem which Spree depends on. The `property_name_cont` here is called a predicate, and you can learn more about them by reading about [Predicates on the Ransack wiki](https://github.com/ernie/ransack/wiki/Basic-Searching).
+
+The search results are paginated.
+
+### Response
+
+<%= headers 200 %>
+<%= json(:product_property) do |h|
+ { :product_properties => [h],
+   :count => 10,
+   :pages => 2,
+   :current_page => 1 }
+end %> 
 
 ## A single product property
 
