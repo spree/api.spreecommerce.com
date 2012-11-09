@@ -11,13 +11,49 @@ title: Zones | Spree API
 
 To get a list of zones, make this request:
 
-
     GET /api/zones
+
+Zones are paginated and can be iterated through by passing along a `page` parameter:
+
+    GET /api/zones?page=2
+
+### Parameters
+
+page
+: The page number of zone to display.
+
+per_page
+: The number of zones to return per page
 
 ### Response
 
 <%= headers 200 %>
-<%= json(:zone) { |h| [h] } %>
+<%= json(:zone) do |h| 
+{ :zones => [h],
+  :count => 25,
+  :pages => 5,
+  :current_page => 1 }
+end %>
+
+## Searching zones
+
+To search for a particular zone, make a request like this:
+
+    GET /api/zones?q[name_cont]=north
+
+The searching API is provided through the Ransack gem which Spree depends on. The `name_cont` here is called a predicate, and you can learn more about them by reading about [Predicates on the Ransack wiki](https://github.com/ernie/ransack/wiki/Basic-Searching).
+
+The search results are paginated.
+
+### Response
+
+<%= headers 200 %>
+<%= json(:zone) do |h|
+ { :zones => [h],
+   :count => 25,
+   :pages => 5,
+   :current_page => 1 }
+end %> 
 
 ## A single zone
 
