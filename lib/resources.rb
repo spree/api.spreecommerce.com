@@ -79,7 +79,7 @@ module Spree
       end
 
       def admin_only
-        warning("This action is only accessible by an admin user.") 
+        warning("This action is only accessible by an admin user.")
       end
 
       def not_found
@@ -112,7 +112,7 @@ module Spree
           "viewable_id"=>1}
       }
 
-    OPTION_VALUE = 
+    OPTION_VALUE =
       {"option_value"=>
         {
           "id"=>1,
@@ -142,7 +142,7 @@ module Spree
          }
       }
 
-    PRODUCT_PROPERTY = 
+    PRODUCT_PROPERTY =
       {"product_property"=>
         {
           "id"=>1,
@@ -153,7 +153,7 @@ module Spree
          }
        }
 
-    PRODUCT = 
+    PRODUCT =
       {"product"=>
         {
           "id"=>1,
@@ -171,7 +171,7 @@ module Spree
         }
       }
 
-    PAYMENT_METHOD = 
+    PAYMENT_METHOD =
       { "payment_method" =>
         {
           "id"=>732545999,
@@ -192,8 +192,8 @@ module Spree
         }
       }
 
-    ORDER = 
-      { "order" => 
+    ORDER =
+      { "order" =>
         {
           "id"=>1,
           "number"=>"R335381310",
@@ -288,7 +288,7 @@ module Spree
 
     ADDRESS =
       {"address"=>
-        { 
+        {
           "id"=>1,
           "firstname"=>"Spree",
           "lastname"=>"Commerce",
@@ -310,14 +310,16 @@ module Spree
     COUNTRY_STATE = { "state"=> ADDRESS_STATE }
 
     COUNTRY =
-      {
-        "id"=>1,
-        "iso_name"=>"UNITED STATES",
-        "iso"=>"US",
-        "iso3"=>"USA",
-        "name"=>"United States",
-        "numcode"=>1,
-        "states"=> [COUNTRY_STATE]
+      { "country" =>
+        {
+          "id"=>1,
+          "iso_name"=>"UNITED STATES",
+          "iso"=>"US",
+          "iso3"=>"USA",
+          "name"=>"United States",
+          "numcode"=>1,
+          "states"=> [COUNTRY_STATE]
+        }
       }
 
     STATE =
@@ -328,7 +330,7 @@ module Spree
         "name"=>"New York"
       }
 
-    TAXON = 
+    TAXON =
       { "taxon"=>
         {
           "id"=>2,
