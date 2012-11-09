@@ -13,8 +13,7 @@ Retrieve a list of all countries by making this request:
 
     GET /api/countries
 
-
-Orders are paginated and can be iterated through by passing along a `page` parameter:
+Countries are paginated and can be iterated through by passing along a `page` parameter:
 
     GET /api/countries?page=2
 
