@@ -233,7 +233,7 @@ module Spree
           "source_id"=>1,
           "amount"=>"10.00",
           "payment_method_id"=>1,
-          "response_code"=>nil,
+          "response_code"=>"12345",
           "state"=>"checkout",
           "avs_response"=>nil,
           "created_at"=>"2012-10-24T23:26:23Z",

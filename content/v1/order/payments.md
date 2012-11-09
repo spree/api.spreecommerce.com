@@ -13,10 +13,47 @@ To see details about an order's payments, make this request:
 
     GET /api/orders/R1234567/payments
 
+Payments are paginated and can be iterated through by passing along a `page` parameter:
+
+    GET /api/orders/R1234567/payments?page=2
+
+### Parameters
+
+page
+: The page number of payment to display.
+
+per_page
+: The number of payments to return per page
+
 ### Response
 
 <%= headers 200 %>
-<%= json(:payment) { |h| { :payments => [h] } } %>
+<%= json(:payment) do |h| 
+{ :payments => [h],
+  :count => 2,
+  :pages => 2,
+  :current_page => 1 }
+end %>
+
+## Searching payments
+
+To search for a particular payment, make a request like this:
+
+    GET /api/orders/R1234567/payments?q[response_code_cont]=123
+
+The searching API is provided through the Ransack gem which Spree depends on. The `response_code_cont` here is called a predicate, and you can learn more about them by reading about [Predicates on the Ransack wiki](https://github.com/ernie/ransack/wiki/Basic-Searching).
+
+The search results are paginated.
+
+### Response
+
+<%= headers 200 %>
+<%= json(:payment) do |h| 
+{ :payments => [h],
+  :count => 2,
+  :pages => 2,
+  :current_page => 1 }
+end %>
 
 ## A new payment
 
