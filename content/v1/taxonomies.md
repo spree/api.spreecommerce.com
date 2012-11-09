@@ -14,10 +14,43 @@ immediate children for the root node, make a request like this:
 
     GET /api/taxonomies
 
+### Parameters
+
+page
+: The page number of taxonomy to display.
+
+per_page
+: The number of taxonomies to return per page
+
 ### Response
 
 <%= headers 200 %>
-<%= json(:taxonomy) { |h| [h] } %>
+<%= json(:taxonomy) do |h| 
+{ :taxonomies => [h],
+  :count => 25,
+  :pages => 5,
+  :current_page => 1 }
+end %>
+
+## Searching taxonomies
+
+To search for a particular taxonomy, make a request like this:
+
+    GET /api/taxonomies?q[name_cont]=brand
+
+The searching API is provided through the Ransack gem which Spree depends on. The `name_cont` here is called a predicate, and you can learn more about them by reading about [Predicates on the Ransack wiki](https://github.com/ernie/ransack/wiki/Basic-Searching).
+
+The search results are paginated.
+
+### Response
+
+<%= headers 200 %>
+<%= json(:taxonomy) do |h|
+ { :taxonomies => [h],
+   :count => 5,
+   :pages => 2,
+   :current_page => 1 }
+end %> 
 
 ## A single taxonomy
 
