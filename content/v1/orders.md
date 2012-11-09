@@ -24,6 +24,9 @@ Orders are paginated and can be iterated through by passing along a `page` param
 page
 : The page number of order to display.
 
+per_page
+: The number of orders to return per page
+
 ### Response
 
 <%= headers 200 %>
@@ -38,7 +41,7 @@ end %>
 
 To search for a particular order, make a request like this:
 
-    GET /api/products/search.json?q[email_cont]=bob
+    GET /api/orders?q[email_cont]=bob
 
 The searching API is provided through the Ransack gem which Spree depends on. The `email_cont` here is called a predicate, and you can learn more about them by reading about [Predicates on the Ransack wiki](https://github.com/ernie/ransack/wiki/Basic-Searching).
 
