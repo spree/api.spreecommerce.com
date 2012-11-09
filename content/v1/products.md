@@ -25,6 +25,9 @@ show\_deleted
 page
 : The page number of products to display.
 
+per_page
+: The number of products to return per page
+
 ### Response
 
 <%= headers 200 %>
@@ -35,18 +38,25 @@ page
   :current_page => 1 }
 end %> 
 
-## Product searching
+## Searching products
 
 To search for a particular product, make a request like this:
 
-    GET /api/products/search?q[name_cont]=Spree
+    GET /api/products?q[name_cont]=Spree
 
 The searching API is provided through the Ransack gem which Spree depends on. The `name_cont` here is called a predicate, and you can learn more about them by reading about [Predicates on the Ransack wiki](https://github.com/ernie/ransack/wiki/Basic-Searching).
+
+The search results are paginated.
 
 ### Response
 
 <%= headers 200 %>
-<%= json(:product) { |h| { :products => [h] } } %> 
+<%= json(:product) do |h| 
+{ :products => [h],
+  :count => 25,
+  :pages => 5,
+  :current_page => 1 }
+end %>
 
 ## A single product
 
