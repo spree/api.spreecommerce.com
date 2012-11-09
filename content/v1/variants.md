@@ -27,6 +27,9 @@ show\_deleted
 page
 : The page number of variants to display.
 
+per_page
+: The number of variants to return per page
+
 ### Response
 
 <%= headers 200 %>
@@ -35,6 +38,32 @@ page
   :count => 25,
   :pages => 5,
   :current_page => 1 }
+end %> 
+
+## Searching variants
+
+To search for a particular variant, make a request like this:
+
+    GET /api/variants?q[sku_cont]=foo
+
+You can limit this to showing the variants for a particular product by passing through a product id:
+
+    GET /api/products/1/variants?q[sku_cont]=foo
+    # or
+    GET /api/variants?product_id=1&q[sku_cont]=foo
+
+The searching API is provided through the Ransack gem which Spree depends on. The `sku_cont` here is called a predicate, and you can learn more about them by reading about [Predicates on the Ransack wiki](https://github.com/ernie/ransack/wiki/Basic-Searching).
+
+The search results are paginated.
+
+### Response
+
+<%= headers 200 %>
+<%= json(:variant) do |h|
+ { :variants => [h],
+   :count => 25,
+   :pages => 5,
+   :current_page => 1 }
 end %> 
 
 ## A single variant
