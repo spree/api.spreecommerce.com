@@ -44,13 +44,28 @@ data_sources:
     type: static
     items_root: /static
 
+# Configuration for the “watch” command, which watches a site for changes and
+# recompiles if necessary.
+watcher:
+  # A list of directories to watch for changes. When editing this, make sure
+  # that the “output/” and “tmp/” directories are _not_ included in this list,
+  # because recompiling the site will cause these directories to change, which
+  # will cause the site to be recompiled, which will cause these directories
+  # to change, which will cause the site to be recompiled again, and so on.
+  dirs_to_watch: [ 'content', 'layouts', 'lib', 'static', 'assets' ]
+
+  # A list of single files to watch for changes. As mentioned above, don’t put
+  # any files from the “output/” or “tmp/” directories in here.
+  files_to_watch: [ 'config.yaml', 'Rules' ]
+
+  # When to send notifications (using Growl or notify-send).
+  notify_on_compilation_success: true
+  notify_on_compilation_failure: true
+
 # For the atom feed.
-base_url: http://developer.github.com
+base_url: http://api.spreecommerce.com
 
 # Array of [version, released_at] Array tuples.
-api_versions:
+api_versions:  
   -
-    - beta
-    - 2011-4-27
-  -
-    - v3
+    - v1
