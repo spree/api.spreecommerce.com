@@ -77,6 +77,10 @@ pre.headers {
   border-top-left-radius: 3px;
 }
 
+.js-guides {
+  display: none;
+}
+
 .home #site-title {
   position: absolute;
   text-align: center;
