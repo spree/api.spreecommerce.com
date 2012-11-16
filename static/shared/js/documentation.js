@@ -1,32 +1,8 @@
-// Homepage
-// $(document).ready(function(){
-//   bonsai.run(document.getElementById('api-objects'), {
-//       code: function() {
-//         var p_opt = [0, 0, 80, 6]
-
-//         var products =     new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var orders =       new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var images =       new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var taxons =       new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var taxonomies =   new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var payments =     new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var line_items =   new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var orders =       new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var shipments =    new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var zones =        new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var countries =    new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var addresses =    new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var product_prop = new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var variants =     new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-//         var return_auth =  new Polygon(p_opt[0], p_opt[1], p_opt[2], p_opt[3]);
-
-//         stage.addChild(products.)        
-//       },
-//       width: 500,
-//       height: 400
-//     });
-// });
-
+$(document).ready(function(){
+  $("#content").find('h1, h2, h3').each(function(){
+    $(this).prepend("<a href='#"+$(this).attr("id")+"'><i clas='icon-link'><i> ")
+  })
+})
 
 // Init sidebar
 $(function() {
