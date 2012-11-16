@@ -59,6 +59,12 @@ The search results are paginated.
    :current_page => 1 }
 end %> 
 
+### Sorting results
+
+Results can be returned in a specific order by specifying which field to sort by when making a request.
+
+    GET /api/products/1/product_properties?q[s]=property_name%20desc
+
 ## A single product property
 
 To get information about a single product property, make a request like this:

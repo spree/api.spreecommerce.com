@@ -57,6 +57,16 @@ The search results are paginated.
    :current_page => 1 }
 end %> 
 
+### Sorting results
+
+Results can be returned in a specific order by specifying which field to sort by when making a request.
+
+    GET /api/orders?q[s]=number%20desc
+
+It is also possible to sort results using an associated object's field.
+
+    GET /api/orders?q[s]=user_name%20asc
+
 ## A single order
 
 To view the details for a single product, make a request using that order\'s number:

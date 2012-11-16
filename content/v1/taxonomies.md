@@ -52,6 +52,16 @@ The search results are paginated.
    :current_page => 1 }
 end %> 
 
+### Sorting results
+
+Results can be returned in a specific order by specifying which field to sort by when making a request.
+
+    GET /api/taxonomies?q[s]=name%20asc
+
+It is also possible to sort results using an associated object's field.
+
+    GET /api/taxonomies?q[s]=root_name%20desc
+
 ## A single taxonomy
 
 To get information for a single taxonomy, including its root node and the immediate children of the root node, make a request like this:

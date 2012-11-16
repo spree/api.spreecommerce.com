@@ -55,6 +55,12 @@ The search results are paginated.
    :current_page => 1 }
 end %> 
 
+### Sorting results
+
+Results can be returned in a specific order by specifying which field to sort by when making a request.
+
+    GET /api/zones?q[s]=name%20desc
+
 ## A single zone
 
 To get information for a single zone, make this request:

@@ -66,6 +66,16 @@ The search results are paginated.
    :current_page => 1 }
 end %> 
 
+### Sorting results
+
+Results can be returned in a specific order by specifying which field to sort by when making a request.
+
+    GET /api/variants?q[s]=price%20asc
+
+It is also possible to sort results using an associated object's field.
+
+    GET /api/variants?q[s]=product_name%20asc
+
 ## A single variant
 
 To view the details for a single variant, make a request using that variant\'s id, along with its `product_id`:

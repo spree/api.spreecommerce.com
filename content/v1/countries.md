@@ -55,6 +55,10 @@ The search results are paginated.
    :current_page => 1 }
 end %> 
 
+Results can be returned in a specific order by specifying which field to sort by when making a request.
+
+    GET /api/countries?q[s]=name%20desc
+
 ## A single country
 
 Retrieve details about a particular country: 

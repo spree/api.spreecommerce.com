@@ -47,6 +47,12 @@ The searching API is provided through the Ransack gem which Spree depends on. Th
 
 The search results are paginated.
 
+### Sorting results
+
+Results can be returned in a specific order by specifying which field to sort by when making a request.
+
+    GET /api/orders/R1234567/return_authorizations?q[s]=amount%20asc
+
 ### Response
 
 <%= headers 200 %>

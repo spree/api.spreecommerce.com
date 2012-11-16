@@ -58,6 +58,16 @@ The search results are paginated.
   :current_page => 1 }
 end %>
 
+### Sorting results
+
+Results can be returned in a specific order by specifying which field to sort by when making a request.
+
+    GET /api/products?q[s]=sku%20asc
+
+It is also possible to sort results using an associated object's field.
+
+    GET /api/products?q[s]=shipping_category_name%20asc
+
 ## A single product
 
 To view the details for a single product, make a request using that product\'s permalink:
