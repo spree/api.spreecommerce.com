@@ -1,8 +1,6 @@
 ---
-title: Products | Spree API
+title: Products
 ---
-
-# Products API
 
 * TOC
 {:toc}

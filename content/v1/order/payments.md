@@ -1,5 +1,5 @@
 ---
-title: Payments | Spree API
+title: Payments
 ---
 
 # Payments API

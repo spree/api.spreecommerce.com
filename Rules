@@ -13,6 +13,14 @@
 compile '/static/*' do
 end
 
+compile '/' do 
+  filter :erb
+  filter :kramdown, :toc_levels => [2]
+  filter :colorize_syntax,
+    :colorizers => {:javascript => :pygmentsrb}
+  layout 'home'  
+end
+
 compile '/CNAME/' do
 end
 
