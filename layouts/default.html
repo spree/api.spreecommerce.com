@@ -33,16 +33,7 @@
             <a class="logo" href="/"><img src='/images/logo.png' /></a>      
           </div>
           
-          <nav id="main-menu" class="eleven columns">
-            <ul class="inline">
-              <li><a href="http://spreecommerce.com" target="_blank">Home</a></li>
-              <li><a href="http://spreecommerce.com/blog" target="_blank">Blog</a></li>
-              <li><a href="http://spreecommerce.com/extensions" target="_blank">Extensions</a></li>
-              <li><a href="http://spreecommerce.com/community" target="_blank">Community</a></li>
-              <li><a href="http://guides.spreecommerce.com/" target="_blank">Guides</a></li>
-              <li class="active"><a href="/" target="_blank">Api</a></li>
-            </ul>
-          </nav>
+          <%= render '_main_menu' %>
 
         </div>
 
@@ -72,19 +63,6 @@
 
     <%= render '_sidebar' %>
   </div>
-
-  <!-- <div id="js-sidebar" class="sidebar-shell">
-    <div class="js-toggle-list sidebar-module expandable">
-      
-    </div>
-    <div class="sidebar-module">
-      <p>This website is a <a href="https://github.com/spree/api.spreecommerce.com" target="_blank">public GitHub repository</a>. Please help us by forking the project and adding to it.</p>
-
-      <p>
-        The layout used here is from <a href='http://developer.github.com'>GitHub's wonderful API docs</a>.
-      </p>
-    </div>
-  </div> -->
 
   <%= render '_footer' %>
 
