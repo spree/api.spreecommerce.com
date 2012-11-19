@@ -173,6 +173,9 @@ pre.headers {
   padding-left: 0;
 }
 
+#sidebar-menu {
+  margin-top: 56px;
+}
 #sidebar-menu ul {
   list-style: none;  
 }
@@ -192,6 +195,10 @@ pre.headers {
 #sidebar-menu h3 a {
   font-size: 14px;
   text-transform: uppercase;
+}
+
+#sidebar-menu h3 a.active, #sidebar-menu h3 a.active-open {
+  color: #89B64A;
 }
 
 #sidebar-menu ul li ul a {

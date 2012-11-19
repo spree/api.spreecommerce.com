@@ -29,7 +29,7 @@ $(function() {
   var current_url = window.location.pathname
 
   var active_menu = sidebar_menu.find('a[href="'+current_url+'"]')
-  active_menu.addClass('active');  
+  active_menu.addClass('active-open');  
   if(active_menu.parent().next().attr('class') == 'js-guides'){
     active_menu.parent().next().show();
     active_menu.prev().find('i.icon-right-open').removeClass('icon-right-open').addClass('icon-down-open')
