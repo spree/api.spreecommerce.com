@@ -212,6 +212,47 @@ pre.headers code {
   padding-left: 0;
 }
 
+.home #sidebar {
+  margin-top: 30px;
+}
+
+#github ul {
+  list-style: none;
+  margin-left: 0;
+  -webkit-padding-start: 0px;
+  border-left: 1px solid #E5EEF7;
+}
+#github ul li {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  line-height: 18px;
+}
+#github ul li i.icon-dot {
+  position: absolute;
+  position: absolute;
+  margin-left: -31px;
+  font-size: 21px !important;
+}
+#github ul li a {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6286B1;
+}
+#github ul li a:hover {
+  color: #78AD2F;
+}
+#github ul li .info {
+  margin-top: 5px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #BAC3CF;
+}
+
+#github ul li .info .commit-author {
+  margin-left: 10px;
+  text-transform: none;
+}
+
 #sidebar-menu {
   margin-top: 56px;
 }
