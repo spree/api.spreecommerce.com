@@ -56,7 +56,7 @@ window.onload = function() {
   var t_attr_out = {
     fill:           "white",
     "font-size":    "13px",
-    "font-family":  "Menlo",
+    "font-family":  "Source Code Pro",
     "fill-opacity": 0.5
   }
 
@@ -70,7 +70,7 @@ window.onload = function() {
     hexagon_object.animate(h_attr_in, 200);
     this_object.animate(t_attr_in, 200);
   }
-  
+
   // Text on hover out animation
   var t_animate_out = function(this_object, hexagon_object) {
     hexagon_object.animate(h_attr_out, 200);
@@ -150,7 +150,7 @@ window.onload = function() {
   var return_auth = new h_object("h_return_auth", 171, 74, "/v1/order/return_authorizations/", "t_return_auth")
   var return_auth_text = new t_object("t_return_auth", "RETURN\nAUTHORI...", "h_return_auth")
 
-  var orders = new h_object("h_orders", 58, 200, "/v1/orders/", "t_orders")
+  var orders = new h_object("h_orders", 58, 201, "/v1/orders/", "t_orders")
   var orders_text = new t_object("t_orders", "ORDERS", "h_orders")
 
   var payments = new h_object("h_payments", 171, 200, "/v1/order/payments/", "t_payments")

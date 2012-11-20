@@ -59,7 +59,7 @@ ul.inline > li {
 }
 
 code, dl dt {
-  font-family: 'Droid Sans Mono', sans-serif;
+  font-family: 'Source Code Pro', monospace;
   font-size: 14px;
 }
 
@@ -315,3 +315,8 @@ pre.headers code {
 #main-footer .social-icons i.icon-gplus-circled {
   color: #E4532E;
 }
+
+/* Browser fixes */
+.firefox #main-footer .social-icons i { padding-top: 0; padding-bottom: 1px }
+.ie #main-footer .social-icons i { height: 28px; width: 29px }
+.ie #main-footer .social-icons i.icon-github-circled { padding-right: 1px }
