@@ -19,7 +19,7 @@ Developers communicate with the Spree API using the [JSON](http://www.json.org) 
 
 ## Making an API Call
 
-You will need an authentication token to access the API. These keys can be generated on the user edit screen within the admin interface. To make a request to the API, pass a `X-Spree-Token header` along with the request:
+You will need an authentication token to access the API. These keys can be generated on the user edit screen within the admin interface. To make a request to the API, pass a `X-Spree-Token` header along with the request:
 
     curl --header "X-Spree-Token: YOUR_KEY_HERE" http://example.com/api/products.json
 
