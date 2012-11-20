@@ -56,11 +56,15 @@ ul.inline > li {
 
 code, dl dt {
   font-family: 'Droid Sans Mono', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 dt {
-  font-style: italic;
+  color: #73A7E9;
+}
+
+dd {
+  margin-bottom: 15px;
 }
 
 code {
@@ -73,8 +77,8 @@ code {
 pre code {
   padding: 0;
   background-color: inherit;
-  color: inherit;
-  border-radius: inherit;
+  color: #68A8EC;
+  border-radius: inherit;  
 }
 
 pre.highlight {
@@ -85,6 +89,10 @@ pre.highlight {
   margin-top: 0;
 }
 
+pre.highlight code {
+  font-size: 12px;
+}
+
 pre.headers {
   padding: 5px 15px;
   margin-bottom: 0;
@@ -93,6 +101,9 @@ pre.headers {
   text-transform: uppercase;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+}
+pre.headers code {
+  color: white;
 }
 
 .js-guides {
