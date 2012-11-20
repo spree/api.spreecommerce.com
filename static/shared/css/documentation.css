@@ -40,6 +40,12 @@ button, .button {
   -o-transition: background-color 1s; /* Opera */
 }
 
+input[type="button"]:hover, 
+input[type="submit"]:hover,
+button:hover, .button:hover {
+  background-color: #228DF2;
+}
+
 ul.inline {
   list-style: none;
 }
@@ -113,6 +119,9 @@ pre.headers {
   text-align: center;
   left: 50%;
   margin-left: -100px;
+}
+.home #get-started:hover {
+  background-color: #8BC73A;
 }
 .home #site-title h1 {
   font-size: 45px;
