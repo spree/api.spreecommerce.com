@@ -67,26 +67,26 @@ window.onload = function() {
 
   // Text on hover in animation
   var t_animate_in = function(this_object, hexagon_object) {
-    hexagon_object.animate(h_attr_in, 200)
-    this_object.animate({"fill": "white", "fill-opacity": 1}, 200)
+    hexagon_object.animate(h_attr_in, 200);
+    this_object.animate(t_attr_in, 200);
   }
-
+  
   // Text on hover out animation
   var t_animate_out = function(this_object, hexagon_object) {
     hexagon_object.animate(h_attr_out, 200);
-    this_object.animate({"fill-opacity": 0.2, "fill": "white"}, 200)
+    this_object.animate(t_attr_out, 200);
   }
 
   // Hexagon on hover in animation
   var h_animate_in = function(this_object, text_object) {
-    this_object.animate(h_attr_in, 200)
-    text_object.animate(t_attr_in, 200)
+    this_object.animate(h_attr_in, 200);
+    text_object.animate(t_attr_in, 200);
   }
 
   // Hexagon on hover out animation
   var h_animate_out = function(this_object, text_object) {
     this_object.animate(h_attr_out, 200);
-    text_object.animate(t_attr_out, 200)
+    text_object.animate(t_attr_out, 200);
   }
 
   // API Hexagon object
@@ -180,7 +180,7 @@ window.onload = function() {
   var zones = new h_object("h_zones", 367, 327, "/v1/zones/", "t_zones")
   var zones_text = new t_object("t_zones", "ZONES", "h_zones")
 
-  var countries = new h_object("h_countries", 479, 327, "/v1/countries/", "t_countries")
+  var countries = new h_object("h_countries", 478, 327, "/v1/countries/", "t_countries")
   var countries_text = new t_object("t_countries", "COUNTRIES", "h_countries")
 
   var addresses = new h_object("h_addresses", 590, 327, "/v1/addresses/", "t_addresses")
