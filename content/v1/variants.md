@@ -1,5 +1,5 @@
 ---
-title: Variants | Spree API
+title: Variants
 ---
 
 # Variants API

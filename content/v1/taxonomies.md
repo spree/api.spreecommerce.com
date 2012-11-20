@@ -1,5 +1,5 @@
 ---
-title: Taxonomies | Spree API
+title: Taxonomies
 ---
 
 # Taxonomies API

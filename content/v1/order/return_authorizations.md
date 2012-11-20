@@ -1,5 +1,5 @@
 ---
-title: Return Authorizations | Spree API
+title: Return Authorizations
 ---
 
 # Return Authorizations API

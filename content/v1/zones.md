@@ -1,5 +1,5 @@
 ---
-title: Zones | Spree API
+title: Zones
 ---
 
 # Zones API

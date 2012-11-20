@@ -1,5 +1,5 @@
 ---
-title: Address | Spree API
+title: Address
 ---
 
 # Address API

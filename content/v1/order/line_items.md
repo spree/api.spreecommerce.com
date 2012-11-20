@@ -1,5 +1,5 @@
 ---
-title: Line Items | Spree API
+title: Line Items
 ---
 
 # Line Items API

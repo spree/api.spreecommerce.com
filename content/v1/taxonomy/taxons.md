@@ -1,5 +1,5 @@
 ---
-title: Taxons | Spree API
+title: Taxons
 ---
 
 # Taxons API

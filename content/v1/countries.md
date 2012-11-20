@@ -1,5 +1,5 @@
 ---
-title: Countries | GitHub API
+title: Countries
 ---
 
 # Country API

@@ -1,5 +1,5 @@
 ---
-title: Summary | Spree API
+title: Summary
 ---
 
 # Summary

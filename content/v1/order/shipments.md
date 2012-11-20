@@ -1,5 +1,5 @@
 ---
-title: Shipments | Spree API
+title: Shipments
 ---
 
 # Shipments API

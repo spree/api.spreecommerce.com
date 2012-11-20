@@ -1,5 +1,5 @@
 ---
-title: Product Properties | Spree API
+title: Product Properties
 ---
 
 # Product Properties API
