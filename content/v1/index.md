@@ -9,7 +9,7 @@ Spree currently supports RESTful access to the following resources:
 * [Products](/v1/products)
 * [Variants](/v1/variants)
 * [Orders](/v1/orders)
-* [Line Items](/v1/line_items)
+* [Line Items](/v1/order/line_items)
 
 This API conforms to a set of [rules](/v1/rules).
 
