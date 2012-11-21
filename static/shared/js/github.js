@@ -1,8 +1,9 @@
 $(function(){
   $.ajax({
     url: "https://api.github.com/repos/spree/spree/commits?path=api&until=", 
+    dataType: "jsonp",
     success: function(data){
-      $.each(data, function(index, item){
+      $.each(data.data, function(index, item){
         if(index < 5) {          
           $("#commits").append(
                                "<li class='commit'><i class='icon-dot'></i>" +

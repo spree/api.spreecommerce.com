@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5, h6, a {
   text-decoration: none;  
 }
 
+h1 {
+  font-size: 20px;
+}
+
 h1, h2, h3 {
   border-bottom: 1px solid #E6EEF7;
   line-height: 2em;
@@ -36,7 +40,12 @@ button, .button {
   font-weight: 600 !important;
   padding: 7px 15px;
   background-color: #3678D5;
-  border-radius: 3px;
+
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+       -o-border-radius: 3px;  
+          border-radius: 3px;
 
   transition: background-color 1s;
   -moz-transition: background-color 1s; /* Firefox 4 */
@@ -75,22 +84,42 @@ code {
   padding: 3px 5px;
   background-color: #EAF3FF;
   color: #73A7E9;
-  border-radius: 3px;
+  
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+       -o-border-radius: 3px;  
+          border-radius: 3px;
 }
 
 pre code {
   padding: 0;
   background-color: inherit;
   color: #68A8EC;
-  border-radius: inherit;  
+  
+  -webkit-border-radius: inherit;
+     -moz-border-radius: inherit;
+      -ms-border-radius: inherit;
+       -o-border-radius: inherit;  
+          border-radius: inherit;
 }
 
 pre.highlight {
   padding: 15px;
   background-color: #EAF3FF;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
   margin-top: 0;
+
+  -webkit-border-bottom-right-radius: 3px;
+     -moz-border-bottom-right-radius: 3px;
+      -ms-border-bottom-right-radius: 3px;
+       -o-border-bottom-right-radius: 3px;  
+          border-bottom-right-radius: 3px;
+
+  -webkit-border-bottom-left-radius: 3px;
+     -moz-border-bottom-left-radius: 3px;
+      -ms-border-bottom-left-radius: 3px;
+       -o-border-bottom-left-radius: 3px;  
+          border-bottom-left-radius: 3px;
 }
 
 pre.highlight code {
@@ -103,8 +132,18 @@ pre.headers {
   background-color: #9DC5F3;
   color: white;
   text-transform: uppercase;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  
+  -webkit-border-top-right-radius: 3px;
+     -moz-border-top-right-radius: 3px;
+      -ms-border-top-right-radius: 3px;
+       -o-border-top-right-radius: 3px;  
+          border-top-right-radius: 3px;
+
+  -webkit-border-top-left-radius: 3px;
+     -moz-border-top-left-radius: 3px;
+      -ms-border-top-left-radius: 3px;
+       -o-border-top-left-radius: 3px;  
+          border-top-left-radius: 3px;
 }
 pre.headers code {
   color: white;
@@ -219,6 +258,7 @@ pre.headers code {
 #github ul {
   list-style: none;
   margin-left: 0;
+  padding-left: 0;
   -webkit-padding-start: 0px;
   border-left: 1px solid #E5EEF7;
 }
@@ -342,7 +382,12 @@ pre.headers code {
   height: 30px;
   border: 3px solid white;
   display: block;
-  border-radius: 30px;
+  
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+       -o-border-radius: 30px;  
+          border-radius: 30px;
 }
 #main-footer .social-icons i.icon-github-circled {
   color: #2C84C7;
@@ -361,3 +406,4 @@ pre.headers code {
 .firefox #main-footer .social-icons i { padding-top: 0; padding-bottom: 1px }
 .ie #main-footer .social-icons i { height: 28px; width: 29px }
 .ie #main-footer .social-icons i.icon-github-circled { padding-right: 1px }
+.ie #github ul li i.icon-dot { font-size: 20px !important; margin-left: -30px }
