@@ -144,43 +144,43 @@ window.onload = function() {
   }
 
   // Creatring api objects on canvas
-  var line_items = new h_object("h_line_items", 58, 74, "/v1/order/line_items/", "t_line_items")  
+  var line_items = new h_object("h_line_items", 57, 74, "/v1/order/line_items/", "t_line_items")  
   var line_items_text = new t_object("t_line_items", "LINE ITEMS", "h_line_items")
 
   var return_auth = new h_object("h_return_auth", 171, 74, "/v1/order/return_authorizations/", "t_return_auth")
   var return_auth_text = new t_object("t_return_auth", "RETURN\nAUTHORI...", "h_return_auth")
 
-  var orders = new h_object("h_orders", 58, 201, "/v1/orders/", "t_orders")
+  var orders = new h_object("h_orders", 57, 201, "/v1/orders/", "t_orders")
   var orders_text = new t_object("t_orders", "ORDERS", "h_orders")
 
   var payments = new h_object("h_payments", 171, 200, "/v1/order/payments/", "t_payments")
   var payments_text = new t_object("t_payments", "PAYMENTS", "h_payments")
 
-  var shipments = new h_object("h_shipments", 58, 327, "/v1/order/shipments/", "t_shipments")  
+  var shipments = new h_object("h_shipments", 57, 327, "/v1/order/shipments/", "t_shipments")  
   var shipments_text = new t_object("t_shipments", "SHIPMENTS", "h_shipments")
 
-  var product_properties = new h_object("h_product_properties", 680, 200, "/v1/product/properties/", "t_product_properties")
+  var product_properties = new h_object("h_product_properties", 678, 200, "/v1/product/properties/", "t_product_properties")
   var product_properties_text = new t_object("t_product_properties", "PRODUCT\nPROPERTIES", "h_product_properties")
 
-  var variants = new h_object("h_variants", 793, 74, "/v1/variants/", "t_variants")
+  var variants = new h_object("h_variants", 792, 74, "/v1/variants/", "t_variants")
   var variants_text = new t_object("t_variants", "VARIANTS", "h_variants")
 
   var images = new h_object("h_images", 906, 74, "/v1/images/", "t_images")
   var images_text = new t_object("t_images", "IMAGES", "h_images")
 
-  var products = new h_object("h_products", 793, 200, "/v1/products/", "t_products")
+  var products = new h_object("h_products", 792, 200, "/v1/products/", "t_products")
   var products_text = new t_object("t_products", "PRODUCTS", "h_products")
 
-  var taxons = new h_object("h_taxons", 793, 327, "/v1/taxonomy/taxons/", "t_taxons")
+  var taxons = new h_object("h_taxons", 792, 327, "/v1/taxonomy/taxons/", "t_taxons")
   var taxons_text = new t_object("t_taxons", "TAXONS", "h_taxons")
 
   var taxonomies = new h_object("h_taxonomies", 906, 327, "/v1/taxonomies/", "t_taxonomies")
   var taxonomies_text = new t_object("t_taxonomies", "TAXONOMIES", "h_taxonomies")
 
-  var zones = new h_object("h_zones", 367, 327, "/v1/zones/", "t_zones")
+  var zones = new h_object("h_zones", 366, 327, "/v1/zones/", "t_zones")
   var zones_text = new t_object("t_zones", "ZONES", "h_zones")
 
-  var countries = new h_object("h_countries", 478, 327, "/v1/countries/", "t_countries")
+  var countries = new h_object("h_countries", 477, 327, "/v1/countries/", "t_countries")
   var countries_text = new t_object("t_countries", "COUNTRIES", "h_countries")
 
   var addresses = new h_object("h_addresses", 590, 327, "/v1/addresses/", "t_addresses")
