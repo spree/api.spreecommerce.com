@@ -165,7 +165,7 @@ window.onload = function() {
   var variants = new h_object("h_variants", 792, 74, "/v1/variants/", "t_variants")
   var variants_text = new t_object("t_variants", "VARIANTS", "h_variants")
 
-  var images = new h_object("h_images", 906, 74, "/v1/images/", "t_images")
+  var images = new h_object("h_images", 906, 74, "#", "t_images")
   var images_text = new t_object("t_images", "IMAGES", "h_images")
 
   var products = new h_object("h_products", 792, 200, "/v1/products/", "t_products")
