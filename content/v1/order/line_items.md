@@ -24,7 +24,7 @@ This will create a new line item representing a single item for the variant with
 
 To update the information for a line item, make a request like this:
 
-    POST /api/orders/R1234567/line_items/1?line_item[variant_id]=1&line_item[quantity]=1
+    PUT /api/orders/R1234567/line_items/1?line_item[variant_id]=1&line_item[quantity]=1
 
 This request will update the line item with the ID of 1 for the order, updating the line item's `variant_id` to 1, and its `quantity` 1.
 
