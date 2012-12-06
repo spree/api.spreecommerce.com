@@ -36,7 +36,7 @@ You may choose to update shipment attributes with this request as well:
 
     PUT /api/orders/R1234567/shipments/1/ship?shipment[number]=1234567
 
-## Response
+### Response
 
 <%= headers 200 %>
 <%= json(:shipment) %>
