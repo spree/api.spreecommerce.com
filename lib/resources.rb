@@ -98,123 +98,106 @@ module Spree
     end
 
     IMAGE =
-      {"image"=>
-         {"id"=>1,
-          "position"=>1,
-          "attachment_content_type"=>"image/jpg",
-          "attachment_file_name"=>"ror_tote.jpeg",
-          "type"=>"Spree::Image",
-          "attachment_updated_at"=>nil,
-          "attachment_width"=>360,
-          "attachment_height"=>360,
-          "alt"=>nil,
-          "viewable_type"=>"Spree::Variant",
-          "viewable_id"=>1}
-      }
+       {"id"=>1,
+        "position"=>1,
+        "attachment_content_type"=>"image/jpg",
+        "attachment_file_name"=>"ror_tote.jpeg",
+        "type"=>"Spree::Image",
+        "attachment_updated_at"=>nil,
+        "attachment_width"=>360,
+        "attachment_height"=>360,
+        "alt"=>nil,
+        "viewable_type"=>"Spree::Variant",
+        "viewable_id"=>1}
 
     OPTION_VALUE =
-      {"option_value"=>
-        {
-          "id"=>1,
-          "name"=>"Small",
-          "presentation"=>"S",
-          "option_type_name"=>"tshirt-size",
-          "option_type_id"=>1
-        }
+      {
+        "id"=>1,
+        "name"=>"Small",
+        "presentation"=>"S",
+        "option_type_name"=>"tshirt-size",
+        "option_type_id"=>1
       }
 
     VARIANT =
-      { "variant"=>
-         {
-           "id"=>1,
-            "name"=>"Ruby on Rails Tote",
-            "count_on_hand"=>10,
-            "sku"=>"ROR-00011",
-            "price"=>"15.99",
-            "weight"=>nil,
-            "height"=>nil,
-            "width"=>nil,
-            "depth"=>nil,
-            "is_master"=>true,
-            "cost_price"=>"13.0",
-            "permalink"=>"ruby-on-rails-tote",
-            "option_values"=> [OPTION_VALUE]
-         }
-      }
+       {
+         "id"=>1,
+          "name"=>"Ruby on Rails Tote",
+          "count_on_hand"=>10,
+          "sku"=>"ROR-00011",
+          "price"=>"15.99",
+          "weight"=>nil,
+          "height"=>nil,
+          "width"=>nil,
+          "depth"=>nil,
+          "is_master"=>true,
+          "cost_price"=>"13.0",
+          "permalink"=>"ruby-on-rails-tote",
+          "option_values"=> [OPTION_VALUE]
+       }
 
     PRODUCT_PROPERTY =
-      {"product_property"=>
-        {
-          "id"=>1,
-          "product_id"=>1,
-          "property_id"=>1,
-          "value"=>"Tote",
-          "property_name"=>"bag_type"
-         }
+      {
+        "id"=>1,
+        "product_id"=>1,
+        "property_id"=>1,
+        "value"=>"Tote",
+        "property_name"=>"bag_type"
        }
 
     PRODUCT =
-      {"product"=>
-        {
-          "id"=>1,
-          "name"=>"Example product",
-          "description"=> "Description",
-          "price"=>"15.99",
-          "available_on"=>"2012-10-17T03:43:57Z",
-          "permalink"=>"ruby-on-rails-tote",
-          "count_on_hand"=>10,
-          "meta_description"=>nil,
-          "meta_keywords"=>nil,
-          "variants"=> [VARIANT],
-          "images"=> [IMAGE],
-          "product_properties"=> [PRODUCT_PROPERTY]
-        }
+      {
+        "id"=>1,
+        "name"=>"Example product",
+        "description"=> "Description",
+        "price"=>"15.99",
+        "available_on"=>"2012-10-17T03:43:57Z",
+        "permalink"=>"ruby-on-rails-tote",
+        "count_on_hand"=>10,
+        "meta_description"=>nil,
+        "meta_keywords"=>nil,
+        "variants"=> [VARIANT],
+        "images"=> [IMAGE],
+        "product_properties"=> [PRODUCT_PROPERTY]
       }
 
     PAYMENT_METHOD =
-      { "payment_method" =>
-        {
-          "id"=>732545999,
-          "name"=>"Check",
-          "description"=>"Pay by check."
-        }
+      {
+        "id"=>732545999,
+        "name"=>"Check",
+        "description"=>"Pay by check."
       }
 
 
     ORDER_PAYMENT =
-      {"payment"=>
-        {
-          "id"=>1,
-          "amount"=>"10.00",
-          "state"=>"checkout",
-          "payment_method_id"=>1,
-          "payment_method" => PAYMENT_METHOD
-        }
+      {
+        "id"=>1,
+        "amount"=>"10.00",
+        "state"=>"checkout",
+        "payment_method_id"=>1,
+        "payment_method" => PAYMENT_METHOD
       }
 
     ORDER =
-      { "order" =>
-        {
-          "id"=>1,
-          "number"=>"R335381310",
-          "item_total"=>"0.0",
-          "total"=>"0.0",
-          "state"=>"cart",
-          "adjustment_total"=>"0.0",
-          "user_id"=>nil,
-          "created_at"=>"2012-10-24T01:02:25Z",
-          "updated_at"=>"2012-10-24T01:02:25Z",
-          "completed_at"=>nil,
-          "payment_total"=>"0.0",
-          "shipment_state"=>nil,
-          "payment_state"=>nil,
-          "email"=>nil,
-          "special_instructions"=>nil,
-        }
+      {
+        "id"=>1,
+        "number"=>"R335381310",
+        "item_total"=>"0.0",
+        "total"=>"0.0",
+        "state"=>"cart",
+        "adjustment_total"=>"0.0",
+        "user_id"=>nil,
+        "created_at"=>"2012-10-24T01:02:25Z",
+        "updated_at"=>"2012-10-24T01:02:25Z",
+        "completed_at"=>nil,
+        "payment_total"=>"0.0",
+        "shipment_state"=>nil,
+        "payment_state"=>nil,
+        "email"=>nil,
+        "special_instructions"=>nil,
       }
 
-    line_item_variant = VARIANT["variant"]
-    line_item_variant.delete("option_values")
+    line_item_variant = VARIANT
 
     LINE_ITEM =
       {
@@ -226,19 +209,17 @@ module Spree
       }
 
     PAYMENT =
-      {"payment"=>
-        {
-          "id"=>1,
-          "source_type"=>"Spree::CreditCard",
-          "source_id"=>1,
-          "amount"=>"10.00",
-          "payment_method_id"=>1,
-          "response_code"=>"12345",
-          "state"=>"checkout",
-          "avs_response"=>nil,
-          "created_at"=>"2012-10-24T23:26:23Z",
-          "updated_at"=>"2012-10-24T23:26:23Z"
-        }
+      {
+        "id"=>1,
+        "source_type"=>"Spree::CreditCard",
+        "source_id"=>1,
+        "amount"=>"10.00",
+        "payment_method_id"=>1,
+        "response_code"=>"12345",
+        "state"=>"checkout",
+        "avs_response"=>nil,
+        "created_at"=>"2012-10-24T23:26:23Z",
+        "updated_at"=>"2012-10-24T23:26:23Z"
       }
 
     SHIPPING_METHOD =
@@ -249,17 +230,15 @@ module Spree
       }
 
     SHIPMENT =
-      { "shipment"=>
-        {
-          "id"=>1,
-          "tracking"=>nil,
-          "number"=>"H123456789",
-          "cost"=>"5.0",
-          "shipped_at"=>nil,
-          "state"=>"pending",
-          "order_id"=>"R1234567",
-          "shipping_method"=> SHIPPING_METHOD
-        }
+      {
+        "id"=>1,
+        "tracking"=>nil,
+        "number"=>"H123456789",
+        "cost"=>"5.0",
+        "shipped_at"=>nil,
+        "state"=>"pending",
+        "order_id"=>"R1234567",
+        "shipping_method"=> SHIPPING_METHOD
       }
 
     ORDER_SHOW = ORDER.merge({
@@ -287,39 +266,35 @@ module Spree
       }
 
     ADDRESS =
-      {"address"=>
-        {
-          "id"=>1,
-          "firstname"=>"Spree",
-          "lastname"=>"Commerce",
-          "address1"=>"1 Someplace Lane",
-          "address2"=>"Suite 1",
-          "city"=>"Bethesda",
-          "zipcode"=>"16804",
-          "phone"=>"123.4567.890",
-          "company"=>nil,
-          "alternative_phone"=>nil,
-          "country_id"=>1,
-          "state_id"=>1,
-          "state_name"=>nil,
-          "country"=> ADDRESS_COUNTRY,
-          "state" => ADDRESS_STATE
-        }
+      {
+        "id"=>1,
+        "firstname"=>"Spree",
+        "lastname"=>"Commerce",
+        "address1"=>"1 Someplace Lane",
+        "address2"=>"Suite 1",
+        "city"=>"Bethesda",
+        "zipcode"=>"16804",
+        "phone"=>"123.4567.890",
+        "company"=>nil,
+        "alternative_phone"=>nil,
+        "country_id"=>1,
+        "state_id"=>1,
+        "state_name"=>nil,
+        "country"=> ADDRESS_COUNTRY,
+        "state" => ADDRESS_STATE
       }
 
     COUNTRY_STATE = { "state"=> ADDRESS_STATE }
 
     COUNTRY =
-      { "country" =>
-        {
-          "id"=>1,
-          "iso_name"=>"UNITED STATES",
-          "iso"=>"US",
-          "iso3"=>"USA",
-          "name"=>"United States",
-          "numcode"=>1,
-          "states"=> [COUNTRY_STATE]
-        }
+      {
+        "id"=>1,
+        "iso_name"=>"UNITED STATES",
+        "iso"=>"US",
+        "iso3"=>"USA",
+        "name"=>"United States",
+        "numcode"=>1,
+        "states"=> [COUNTRY_STATE]
       }
 
     STATE =
@@ -331,82 +306,68 @@ module Spree
       }
 
     TAXON =
-      { "taxon"=>
-        {
-          "id"=>2,
-          "name"=>"Ruby on Rails",
-          "permalink"=>"brands/ruby-on-rails",
-          "position"=>1,
-          "parent_id"=>1,
-          "taxonomy_id"=>1
-        }
+      {
+        "id"=>2,
+        "name"=>"Ruby on Rails",
+        "permalink"=>"brands/ruby-on-rails",
+        "position"=>1,
+        "parent_id"=>1,
+        "taxonomy_id"=>1
       }
 
     SECONDARY_TAXON =
-      { "taxon"=>
-        {
-          "id"=>3,
-          "name"=>"T-Shirts",
-          "permalink"=>"brands/ruby-on-rails/t-shirts",
-          "position"=>1,
-          "parent_id"=>2,
-          "taxonomy_id"=>1
-        }
+      {
+        "id"=>3,
+        "name"=>"T-Shirts",
+        "permalink"=>"brands/ruby-on-rails/t-shirts",
+        "position"=>1,
+        "parent_id"=>2,
+        "taxonomy_id"=>1
       }
 
-    TAXON_WITH_CHILDREN = TAXON["taxon"].merge(:taxons => [SECONDARY_TAXON])
-    TAXON_WITHOUT_CHILDREN = TAXON["taxon"].merge(:taxons => [])
+    TAXON_WITH_CHILDREN = TAXON.merge(:taxons => [SECONDARY_TAXON])
+    TAXON_WITHOUT_CHILDREN = TAXON.merge(:taxons => [])
 
     TAXONOMY =
-      { "taxonomy"=>
-       {
-         "id"=>1,
-         "name"=>"Brand",
-         "root"=> TAXON_WITH_CHILDREN
-       }
-      }
+     {
+       "id"=>1,
+       "name"=>"Brand",
+       "root"=> TAXON_WITH_CHILDREN
+     }
 
     NEW_TAXONOMY =
-      { "taxonomy" =>
-        {
-          "id" => 1,
-          "name" => "Brand",
-          "root" => TAXON_WITHOUT_CHILDREN
-        }
+      {
+        "id" => 1,
+        "name" => "Brand",
+        "root" => TAXON_WITHOUT_CHILDREN
       }
 
     ZONE_MEMBER =
-      { "zone_member" =>
-        {
-          "id"=>1,
-          "name"=>"United States",
-          "zoneable_type"=>"Spree::Country",
-          "zoneable_id"=>1,
-        }
+      {
+        "id"=>1,
+        "name"=>"United States",
+        "zoneable_type"=>"Spree::Country",
+        "zoneable_id"=>1,
       }
 
     ZONE =
-      {"zone"=>
-        {
-          "id"=>1,
-          "name"=>"America",
-          "description"=>"The US",
-          "zone_members"=> [ZONE_MEMBER]
-        }
+      {
+        "id"=>1,
+        "name"=>"America",
+        "description"=>"The US",
+        "zone_members"=> [ZONE_MEMBER]
       }
 
     RETURN_AUTHORIZATION =
-      {"return_authorization"=>
-        {
-          "id"=>1,
-          "number"=>"12345",
-          "state"=>"authorized",
-          "amount"=> 14.22,
-          "order_id"=>14,
-          "reason"=>"Didn't fit",
-          "created_at"=>"2012-10-24T23:26:23Z",
-          "updated_at"=>"2012-10-24T23:26:23Z"
-        }
+      {
+        "id"=>1,
+        "number"=>"12345",
+        "state"=>"authorized",
+        "amount"=> 14.22,
+        "order_id"=>14,
+        "reason"=>"Didn't fit",
+        "created_at"=>"2012-10-24T23:26:23Z",
+        "updated_at"=>"2012-10-24T23:26:23Z"
       }
     end
 end
