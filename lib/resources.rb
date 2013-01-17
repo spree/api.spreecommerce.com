@@ -247,6 +247,29 @@ module Spree
       "shipments" => [SHIPMENT]
     })
 
+    ORDER_SHOW_ADDRESS_STATE = ORDER.merge({
+      "state" => "address",
+      "line_items" => [LINE_ITEM]
+    })
+
+    ORDER_SHOW_DELIVERY_STATE = ORDER.merge({
+      "shipping_methods" => [SHIPPING_METHOD],
+      "state" => "delivery"
+    })
+
+    ORDER_SHOW_PAYMENT_STATE = ORDER.merge({
+      "payment_methods" => [PAYMENT_METHOD],
+      "state" => "payment"
+    })
+
+    ORDER_SHOW_CONFIRM_STATE = ORDER.merge({
+      "state" => "confirm"
+    })
+
+    ORDER_SHOW_COMPLETE_STATE = ORDER.merge({
+      "state" => "complete"
+    })
+
     ADDRESS_COUNTRY =
       {
         "id"=>1,
