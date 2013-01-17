@@ -185,7 +185,7 @@ module Spree
         "item_total"=>"0.0",
         "total"=>"0.0",
         "state"=>"cart",
-        "adjustment_total"=>"0.0",
+        "adjustment_total"=>"-12.0",
         "user_id"=>nil,
         "created_at"=>"2012-10-24T01:02:25Z",
         "updated_at"=>"2012-10-24T01:02:25Z",
@@ -196,6 +196,25 @@ module Spree
         "email"=>nil,
         "special_instructions"=>nil,
       }
+
+
+    ADJUSTMENT = 
+    {
+      "id" => 1073043775,
+      "source_type" => "Spree::Order",
+      "source_id" => 1,
+      "adjustable_type" => "Spree::Order",
+      "adjustable_id" => 1,
+      "originator_type" => "Spree::PromotionAction",
+      "originator_id" => 1,
+      "amount" => "-12.0",
+      "label" => "Promotion (test)",
+      "mandatory" => false,
+      "locked" => false,
+      "eligible" => true,
+      "created_at" => "2012-10-24T01:02:25Z",
+      "updated_at" => "2012-10-24T01:02:25Z"
+    }
 
     line_item_variant = VARIANT
 
@@ -244,7 +263,9 @@ module Spree
     ORDER_SHOW = ORDER.merge({
       "line_items" => [LINE_ITEM],
       "payments" => [PAYMENT],
-      "shipments" => [SHIPMENT]
+      "shipments" => [SHIPMENT],
+      "adjustments" => [ADJUSTMENT]
+
     })
 
     ORDER_SHOW_ADDRESS_STATE = ORDER.merge({
