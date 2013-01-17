@@ -51,9 +51,17 @@ After [updating the order's addresses](/v1/orders/#modifying-address-information
 
 ## Delivery to payment
 
-After [selecting a shipping method](/v1/orders/#selecting-a-delivery-method) the order can be advanced to the `payment` state and the available payment methods can be viewed by making this request:
+To advance to the next state, `payment`, the order will need a shipping method. 
+
+If the order already has a shipping method, you can advance it to the `payment` state by making this request:
 
     PUT /api/checkouts/R335381310
+    
+If the order doesn't have an assigned shipping method, make the following request to setup a shipping method and advance the order:
+    
+    PUT /api/checkouts/R335381310?order[shipping_method_id]=1
+    
+For more information on shipping methods, view the [selecting a delivery method](/v1/orders/#selecting-a-delivery-method) section of the Orders documentation.
 
 ### Response
 
@@ -62,9 +70,17 @@ After [selecting a shipping method](/v1/orders/#selecting-a-delivery-method) the
 
 ## Payment to confirm
 
-After [creating a payment](/v1/order/payments/#a-new-payment) the order can be advanced to the `confirm` state by making this request:
+To advance to the next state, `confirm`, the order will need to have a payment.
+
+If the order already has a payment, you can advance it to the `confirm` state by making this request:
 
     PUT /api/checkouts/R335381310
+    
+If the order doesn't have an assigned payment method, make the following request to setup a payment method and advance the order:
+    
+    PUT /api/checkouts/R335381310?order[payments_attributes][][payment_method_id]=1
+    
+For more information on payments, view the [payments documentation](/v1/orders/payments).
 
 ### Response
 
