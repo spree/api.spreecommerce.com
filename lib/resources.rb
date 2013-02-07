@@ -134,6 +134,7 @@ module Spree
           "cost_price"=>"13.0",
           "permalink"=>"ruby-on-rails-tote",
           "option_values"=> [OPTION_VALUE]
+          "images"=> [IMAGE],
        }
 
     PRODUCT_PROPERTY =
@@ -157,7 +158,6 @@ module Spree
         "meta_description"=>nil,
         "meta_keywords"=>nil,
         "variants"=> [VARIANT],
-        "images"=> [IMAGE],
         "product_properties"=> [PRODUCT_PROPERTY]
       }
 
