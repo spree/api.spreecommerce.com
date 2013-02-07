@@ -4,12 +4,12 @@ title: Summary
 
 # Summary
 
-Spree currently supports RESTful access to the following resources:
+Spree currently supports RESTful access to the resources listed in the sidebar
+on the right &raquo;
 
-* [Products](/v1/products)
-* [Variants](/v1/variants)
-* [Orders](/v1/orders)
-* [Line Items](/v1/order/line_items)
+This API was built using the great [Rabl](https://github.com/nesquena/rabl) gem.
+Please consult its documentation if you wish to understand how the templates use
+it to return data.
 
 This API conforms to a set of [rules](/v1/rules).
 
