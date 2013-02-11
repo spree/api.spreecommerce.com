@@ -23,12 +23,6 @@ module Spree
         500 => '500 Server Error'
       }
 
-      AUTHORS = {
-        :technoweenie => '821395fe70906c8290df7f18ac4ac6cf',
-        :pengwynn     => '7e19cd5486b5d6dc1ef90e671ba52ae0',
-        :pezra        => 'f38112009dc16547051c8ac246cee443'
-      }
-
       DefaultTimeFormat = "%B %-d, %Y".freeze
 
       def post_date(item)
