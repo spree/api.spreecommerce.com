@@ -127,7 +127,7 @@ module Spree
           "is_master"=>true,
           "cost_price"=>"13.0",
           "permalink"=>"ruby-on-rails-tote",
-          "option_values"=> [OPTION_VALUE]
+          "option_values"=> [OPTION_VALUE],
           "images"=> [IMAGE],
        }
 
