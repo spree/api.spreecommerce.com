@@ -29,23 +29,20 @@ compile '/feed/' do
   filter :kramdown, :toc_levels => [2]
 end
 
-%w(v3 */).each do |version|
-  compile "/changes/#{version}" do
-    filter :erb
-    filter :kramdown, :toc_levels => [2]
-    filter :colorize_syntax,
-      :colorizers => {:javascript => :pygmentsrb}
-    layout 'changes' if version[0] == '*'
-    layout 'default'
-  end
-end
-
-compile '*' do
+compile '/developer/*' do
   filter :erb
   filter :kramdown, :toc_levels => [2]
   filter :colorize_syntax,
     :colorizers => {:javascript => :pygmentsrb}
-  layout 'default'
+  layout 'developer'
+end
+
+compile '/api/v1/*' do
+  filter :erb
+  filter :kramdown, :toc_levels => [2]
+  filter :colorize_syntax,
+    :colorizers => {:javascript => :pygmentsrb}
+  layout 'api/v1/default'
 end
 
 route '/static/*' do

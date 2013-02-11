@@ -38,6 +38,8 @@ module Spree
       end
 
       def gravatar_url_for(login)
+        # TODO: Fix this.
+        return ""
         md5 = AUTHORS[login.to_sym]
         default = "https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
         "https://secure.gravatar.com/avatar/%s?s=20&d=%s" %
