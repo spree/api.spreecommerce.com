@@ -1,7 +1,7 @@
 require "bundler/capistrano"
 $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
 
-set :application, 'api'
+set :application, 'guides'
 set :user, 'spree'
 set :group, 'www-data'
 set :domain, 'www.spreecommerce.com'
@@ -15,10 +15,10 @@ role :web, domain
 role :app, domain
 role :db,  domain, :primary => true
 
-set :repository,  "git://github.com/spree/api.spreecommerce.com"
+set :repository,  "git://github.com/spree/guides.spreecommerce.com"
 
 #if exists?(:edge)
-  set :branch, "master"
+  set :branch, "new_guides"
 #else
   #set :branch, "1-2-x"
 #end
