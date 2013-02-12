@@ -12,6 +12,5 @@ When a variant is added to an order, the price of that item is tracked along
 with the line item to preserve that data. If the variant's price were to change,
 then the line item would still have a record of the price at the time of ordering.
 
-* Inventory Tracking
-
+* Inventory tracking notes to go here after Chris+Brian have done their thing.
 
