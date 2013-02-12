@@ -27,6 +27,10 @@ To create a new, empty order, make this request:
 <%= headers 200 %>
 <%= json :order %>
 
+## Managing line items
+
+For instructions on creating, updating and deleting line items, view the [line items documentation](/v1/order/line_items).
+
 ## Cart to address
 
 The newly created order is currently in the `cart` state. After [adding line items](/v1/order/line_items) to the order, it can be advanced to its next state, `address`, by making this request:
@@ -40,7 +44,15 @@ The newly created order is currently in the `cart` state. After [adding line ite
 
 ## Address to delivery
 
-After [updating the order's addresses](/v1/orders/#modifying-address-information) the order can be advanced to the `delivery` state and the available shipping methods can be viewed by making this request:
+### Updating an Order's Address
+
+The order's billing and shipping address must be updated before the order can be transitioned to the `delivery` state.
+
+To update an order's address, make a put request with the following attributes:
+
+<%= json(:address_attributes) %>
+
+After updating the order's addresses the order can be advanced to the `delivery` state and the available shipping methods can be viewed by making this request:
 
     PUT /api/checkouts/R335381310
 

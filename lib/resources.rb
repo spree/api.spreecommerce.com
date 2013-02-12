@@ -198,7 +198,7 @@ module Spree
       }
 
 
-    ADJUSTMENT = 
+    ADJUSTMENT =
     {
       "id" => 1073043775,
       "source_type" => "Spree::Order",
@@ -413,6 +413,32 @@ module Spree
         "created_at"=>"2012-10-24T23:26:23Z",
         "updated_at"=>"2012-10-24T23:26:23Z"
       }
+
+    ADDRESS_ATTRIBUTES =
+    {
+      "order" => {
+        "bill_address_attributes" => {
+          "firstname"  => "John",
+          "lastname"   => "Doe",
+          "address1"   => "7735 Old Georgetown Road",
+          "city"       => "Bethesda",
+          "phone"      => "3014445002",
+          "zipcode"    => "20814",
+          "state_id"   => "STATE_ID",
+          "country_id" => "COUNTRY_ID"
+        },
+        "ship_address_attributes" => {
+          "firstname"  => "John",
+          "lastname"   => "Doe",
+          "address1"   => "7735 Old Georgetown Road",
+          "city"       => "Bethesda",
+          "phone"      => "3014445002",
+          "zipcode"    => "20814",
+          "state_id"   => "STATE_ID",
+          "country_id" => "COUNTRY_ID"
+        }
+      }
+    }
     end
 end
 
