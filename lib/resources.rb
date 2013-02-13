@@ -87,7 +87,8 @@ module Spree
 
       LINKS = {
         :products => "/developer/products",
-        :prices => "/developer/prices"
+        :adjustments => "/developer/adjustments",
+        :payments => "/developer/payments"
       }
 
 
