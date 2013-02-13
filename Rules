@@ -33,8 +33,10 @@ compile '/developer/*' do
   filter :erb
   filter :kramdown, :toc_levels => [2]
   filter :colorize_syntax,
-    :colorizers => {:javascript => :pygmentsrb}
+    :colorizers => {:javascript => :pygmentsrb,
+                    :ruby       => :pygmentsrb}
   layout 'developer'
+  filter :add_toc
 end
 
 compile '/api/v1/*' do

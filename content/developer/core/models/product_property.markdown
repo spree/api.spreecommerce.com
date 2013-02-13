@@ -17,16 +17,12 @@ unique [Variants](/developer/core/models/variants) for a product.
 You can retrieve the value for a property on a `Product` object by calling the
 `property` method on it and passing through that property's name:
 
-<%= ruby do %>
-  product.property("material")
-  => "100% Cotton"
-<% end %> 
+    product.property("material")
+    => "100% Cotton"
 
 You can set a property on a product by calling the `set_property` method:
 
-<%= ruby do %>
-  product.set_property("material", "100% cotton")
-<% end %>
+    product.set_property("material", "100% cotton")
 
 If this property doesn't already exist, a new `Property` instance with this name
 will be created.

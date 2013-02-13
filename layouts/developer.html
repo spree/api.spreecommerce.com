@@ -71,10 +71,13 @@
           <%= yield %>
         </div>
       </div>
-      
     </section>
 
-    <%= render 'developer/_sidebar' %>
+    <% if @item[:has_toc] %>
+      {{TOC}}
+    <% else %>
+      <%= render 'developer/_sidebar' %>
+    <% end %>
   </div>
 
   <%= render '_footer' %>

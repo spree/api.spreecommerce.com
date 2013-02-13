@@ -1,0 +1,99 @@
+---
+title: "Core | Products"
+has_toc: true
+---
+
+## Products
+
+Product records track unique products within your store. These differ from <%=
+link_to "Variants", "#variants" %>, which track the unique variations of a
+product.  For instance, a product that's a T-shirt would have variants denoting
+its different colors. To understand how variants come to be, you must first
+understand option types and option values.
+
+## Option Types and Option Values
+
+Option types denote the different options for a variant. A typical option type
+would be a size, with that option type's values being something such as "Small",
+"Medium" and "Large". Another typical option type could be a color, such as
+"Red", "Green" or "Blue".
+
+## Variants
+
+Variant records track the individual variants of a Product. Variants come in two
+flavours: master variants and normal variants.
+
+Variant records can track some individual properties regarding a variant, such
+as height, width, depth, and cost price. These properties are unique to each
+variant, and so are different from [Product
+Properties](/developer/core/models/product_properties), which apply to all
+variants of that product.
+
+### Master Variants 
+
+Every single product has a master variant, which tracks basic information such
+as a count on hand, a price and a SKU.
+
+By having a master variant, the code within Spree to track [Line
+Items](/developer/core/models/line_item) is simplified.
+
+### Normal Variants
+
+Variants which are not the master variant, are unique based on <%= link_to "option type", "#option-type" %>
+ and <%= link_to "option value", "#option-value" %> combinations. For instance, you
+may be selling a product which is a Baseball Jersey, which comes in the sizes
+"Small", "Medium" and "Large", as well as in the colors of "Red", "Green" and
+"Blue". For this combination of sizes and colors, you would be able to create 9
+unique variants:
+
+* Small, Red
+* Small, Green
+* Small, Blue
+* Medium, Red 
+* Medium, Green
+* Medium, Blue
+* Large, Red
+* Large, Green
+* Large, Blue
+
+## Product Properties
+
+Product properties track individual attributes for a product which don't typically apply to
+products. These are typically additional information about the item. For
+instance, a T-Shirt may have properties representing information about the kind
+of material used, as well as the type of fit the shirt is.
+
+Product properties should not be confused with <%= link_to "option values",
+"#option-types-and-option-values" %>, which are used when defining
+<%= link_to "variants", "#variants" %> for a product. Properties are for a product,
+while option values are for variants.
+
+You can retrieve the value for a property on a `Product` object by calling the
+`property` method on it and passing through that property's name:
+
+    product.property("material")
+    => "100% Cotton"
+
+You can set a property on a product by calling the `set_property` method:
+
+    product.set_property("material", "100% cotton")
+
+If this property doesn't already exist, a new `Property` instance with this name
+will be created.
+
+## Multi-currency support
+
+Price objects track a price for a particular currency and variant combination.
+For instance, a <%= link_to "variant", "#variants" %> may be available for
+$15 (15 USD) and €7 (7 Euro).
+
+This presence or lack of a price for a variant in a particular currency will
+determine if that variant is visible in the frontend. If no variants of a
+product have a particular price value for the current currency, that product
+will not be visible in the frontend.
+
+The price on a product can be different in different currencies. For more
+information, please see the <%= link_to "Prices", :prices %> guide. If a product
+does not have a price set for the current currency (`Spree::Config[:currency]`)
+then that product will not appear in the frontend.
+
