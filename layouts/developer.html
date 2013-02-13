@@ -74,6 +74,7 @@
     </section>
 
     <% if @item[:has_toc] %>
+      <p>↑ <%= link_to "Back to Developer docs", "/developer" %></p>
       {{TOC}}
     <% else %>
       <%= render 'developer/_sidebar' %>
