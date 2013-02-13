@@ -8,7 +8,9 @@ has_toc: true
 Product records track unique products within your store. These differ from <%=
 link_to "Variants", "#variants" %>, which track the unique variations of a
 product.  For instance, a product that's a T-shirt would have variants denoting
-its different colors. To understand how variants come to be, you must first
+its different colors. Together, Products and Variants describe what is for sale.
+
+To understand how variants come to be, you must first
 understand option types and option values.
 
 ## Option Types and Option Values
@@ -17,6 +19,9 @@ Option types denote the different options for a variant. A typical option type
 would be a size, with that option type's values being something such as "Small",
 "Medium" and "Large". Another typical option type could be a color, such as
 "Red", "Green" or "Blue".
+
+A product can be assigned many option types, but must be assigned at least one
+if you wish to create variants for that product.
 
 ## Variants
 
@@ -56,6 +61,28 @@ unique variants:
 * Large, Green
 * Large, Blue
 
+## Images
+
+Images link to a product through its master variant. The sub-variants for the
+product may also have their own unique images to differentiate them in the
+frontend.
+
+Spree automatically handles creation and storage of several size versions of each
+ image (via the Paperclip plugin). The default styles are as follows:
+
+<% ruby do %>
+:styles => {
+  :mini => '48x48>',
+  :small => '100x100>',
+  :product => '240x240>',
+  :large => '600x600>'
+  }
+<% end %>
+
+These sizes can be changed by altering the value of
+`Spree::Config[:attachment_styles]`. (TODO: information about regenerating
+existing images)
+
 ## Product Properties
 
 Product properties track individual attributes for a product which don't typically apply to
@@ -76,7 +103,9 @@ You can retrieve the value for a property on a `Product` object by calling the
 
 You can set a property on a product by calling the `set_property` method:
 
+<% ruby do %>
     product.set_property("material", "100% cotton")
+<% end %>
 
 If this property doesn't already exist, a new `Property` instance with this name
 will be created.
@@ -96,4 +125,13 @@ The price on a product can be different in different currencies. For more
 information, please see the <%= link_to "Prices", :prices %> guide. If a product
 does not have a price set for the current currency (`Spree::Config[:currency]`)
 then that product will not appear in the frontend.
+
+## Prototypes
+
+A prototype is a useful way to share common option type and property
+combinations amongst many different products. For instance, if you're creating a
+lot of shirt products, you may wish to maintain the "Size" and "Color" option
+types, as well as a "Fitting Type" property.
+
+TODO: Flesh out information about prototypes.
 

@@ -71,7 +71,7 @@ module Spree
       end
 
       def ruby(&block)
-        %(<pre class="highlight"><code class="language-javascript">) +
+        %(<pre class="highlight"><code class="language-ruby">) +
         block.call + "</code></pre>"
       end
 
