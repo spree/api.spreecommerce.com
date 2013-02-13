@@ -2,7 +2,7 @@
   title: "Core | Models | Adjustments"
 ---
 
-# Adjustments
+## Adjustments
 
 An adjustment in Spree tracks an adjustment to the price of an
 [Order](/developer/core/models/order) within Spree. 
@@ -12,15 +12,6 @@ value are sometimes referred to as “charges” while adjustments with a negati
 value are sometimes referred to as “credits.” These are just terms of
 convenience since there is only one Spree::Adjustment model in Spree which
 handles this by allowing either positive or negative values.
-
-Adjustments can come from one of three locations:
-
-* [Tax Rates](/developer/core/models/tax_rate)
-* [Shipping Methods](/developer/core/models/shipping_method)
-* [Promotions](/developer/core/models/promotion)
-
-An adjustment's `label` attribute can be used as a good indicator of where the
-adjustment is coming from.
 
 An adjustment links three separate components together:
 
@@ -39,5 +30,34 @@ adjustments, this will be a `Spree::Promotion::Actions::CreateAdjustment`
 object. For tax adjustments, a `Spree::TaxRate` object. For shipping
 adjustments, a `Spree::ShippingMethod` object.
 
+Adjustments can come from one of three locations:
 
+* Tax Rates
+* Shipping Methods
+* Promotions
 
+An adjustment's `label` attribute can be used as a good indicator of where the
+adjustment is coming from.
+
+## Adjustment scopes
+
+There are some helper methods to return the different types of adjustments:
+
+* `tax`: All adjustments where the originator is a `Spree::TaxRate` object.
+* `shipping`: All adjustments where the originator is a `Spree::ShippingMethod`
+  object.
+* `promotion`: All adjustments where the originator is a
+  `Spree::PromotionAction` object.
+* `optional`: All adjustments which are not `mandatory`.
+* `eligible`: Adjustments which have been determined to be `eligible` for their
+  adjustable.
+* `charge`: Adjustments which *increase* the price of their adjustable.
+* `credit`: Adjustments which *decrease* the price of their adjustable.
+
+These scopes can be called on either the `Spree::Adjustment` class itself, or on
+an `adjustments` association. For example, calling any one of these three is
+valid:
+
+     Spree::Adjustment.eligible
+     order.adjustments.eligible
+     line_item.adjustments.eligible
