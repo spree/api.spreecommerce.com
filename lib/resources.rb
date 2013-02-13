@@ -70,6 +70,11 @@ module Spree
           JSON.pretty_generate(hash) + "</code></pre>"
       end
 
+      def ruby(&block)
+        %(<pre class="highlight"><code class="language-javascript">) +
+        block.call + "</code></pre>"
+      end
+
       def warning(message)
         %(<div class='warning'>) + message + %(</div>)
       end
