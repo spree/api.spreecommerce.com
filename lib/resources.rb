@@ -85,12 +85,11 @@ module Spree
         "<a href='#{url}'>#{text}</a>"
       end
 
-      LINKS = {
-        :products => "/developer/products",
-        :adjustments => "/developer/adjustments",
-        :payments => "/developer/payments"
-      }
-
+      LINKS = {}
+      LINKS[:products] = "/developer/products"
+      LINKS[:variants] = LINKS[:products] + "#variants"
+      LINKS[:adjustments] = "/developer/adjustments"
+      LINKS[:payments] = "/developer/payments"
 
       def warning(message)
         %(<div class='warning'>) + message + %(</div>)

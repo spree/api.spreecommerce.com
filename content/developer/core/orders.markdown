@@ -70,9 +70,9 @@ received as payment.
 
 ## Line Items
 
-Line items are used to keep track of items within the context of an 
-[Order](/developer/core/models/order). These records provide a link between orders,
-and [Variants](/developer/core/models/variant)
+Line items are used to keep track of items within the context of an order.
+ These records provide a link between orders,
+and <%= link_to "Variants", :variants %>
 
 When a variant is added to an order, the price of that item is tracked along 
 with the line item to preserve that data. If the variant's price were to change,
