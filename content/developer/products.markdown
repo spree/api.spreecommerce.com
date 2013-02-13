@@ -10,8 +10,17 @@ link_to "Variants", "#variants" %>, which track the unique variations of a
 product.  For instance, a product that's a T-shirt would have variants denoting
 its different colors. Together, Products and Variants describe what is for sale.
 
-To understand how variants come to be, you must first
-understand option types and option values.
+Products have the following attributes:
+
+* `name`:	 short name for the product
+* `description`:	The most elegant, poetic turn of phrase for describing your product’s benefits and features to your site visitors
+* `permalink`:	An SEO slug based off the product name that is placed into the URL for the product
+* `available_on`: 	The first date the product becomes available for sale online in your shop
+* `deleted_at`:	 The date the product is no longer available for sale in the store
+* `meta_description`: 	A description targeted at search engine for search engine optimization (SEO)
+* `meta_keywords`: 	Several words and short phrases separated by comma, also targeted at search engines
+
+To understand how variants come to be, you must first understand option types and option values.
 
 ## Option Types and Option Values
 
@@ -121,10 +130,17 @@ determine if that variant is visible in the frontend. If no variants of a
 product have a particular price value for the current currency, that product
 will not be visible in the frontend.
 
-The price on a product can be different in different currencies. For more
-information, please see the <%= link_to "Prices", :prices %> guide. If a product
-does not have a price set for the current currency (`Spree::Config[:currency]`)
-then that product will not appear in the frontend.
+You may see what price a product would be in the current currency
+(`Spree::Config[:currency]`) by calling the `price` method on that instance:
+
+    product.price 
+    => "15.99"
+
+To find a list of currencies that this product is available in, call `prices` to
+get a list of related `Price` objects:
+
+    product.prices
+    => [#<Spree::Price id: 2 ...]
 
 ## Prototypes
 
