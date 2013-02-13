@@ -5,9 +5,9 @@
 ## Order
 
 The Order model is one of the central models in Spree, providing a central place to
-collect information about the order, including line items, <%= link_to
-"adjustments", :adjustments %>, <%= link_to "payments", :payments %>, addresses, 
-return authorizations, <%= link_to "inventory units", "#" %>, and shipments.
+collect information about the order, including line items, <%= link_to "adjustments", :adjustments %>,
+ <%= link_to "payments", :payments %>, addresses, return authorizations, 
+<%= link_to "inventory units", "#" %>, and shipments.
 
 Every order that is created within Spree is given its own unique identifier,
 beginning with the letter R and ending in a 9-digit number. This unique number
