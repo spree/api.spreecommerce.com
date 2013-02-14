@@ -98,6 +98,10 @@ module Spree
         %(<div class='warning'>) + message + %(</div>)
       end
 
+      def note(&block)
+        %(<div class='note'>) + block.call + %(</div>)
+      end
+
       def admin_only
         warning("This action is only accessible by an admin user.")
       end
