@@ -50,7 +50,7 @@ end
 compile '/api/' do
   filter :erb
   filter :redcarpet, :toc_levels => [2]
-  layout 'home' 
+  layout 'api'
 end
 
 route '/static/*' do
