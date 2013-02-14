@@ -86,10 +86,13 @@ module Spree
       end
 
       LINKS = {}
-      LINKS[:products] = "/developer/products"
+      LINKS[:core] = "/developer/core/"
+      LINKS[:products] = LINKS[:core] + "products"
       LINKS[:variants] = LINKS[:products] + "#variants"
-      LINKS[:adjustments] = "/developer/adjustments"
-      LINKS[:payments] = "/developer/payments"
+      LINKS[:orders] = LINKS[:core] + "orders"
+      LINKS[:line_items] = LINKS[:orders] + "#line-items"
+      LINKS[:adjustments] = LINKS[:core] + "adjustments"
+      LINKS[:payments] = LINKS[:core] + "payments"
 
       def warning(message)
         %(<div class='warning'>) + message + %(</div>)
