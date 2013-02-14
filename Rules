@@ -13,12 +13,12 @@
 compile '/static/*' do
 end
 
-compile '/' do 
+compile '/' do
   filter :erb
   filter :kramdown, :toc_levels => [2]
   filter :colorize_syntax,
     :colorizers => {:javascript => :pygmentsrb}
-  layout 'home'  
+  layout 'default'
 end
 
 compile '/CNAME/' do
@@ -45,6 +45,12 @@ compile '/api/v1/*' do
   filter :colorize_syntax,
     :colorizers => {:javascript => :pygmentsrb}
   layout 'api/v1/default'
+end
+
+compile '/api/' do
+  filter :erb
+  filter :kramdown, :toc_levels => [2]
+  layout 'home' 
 end
 
 route '/static/*' do
