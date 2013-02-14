@@ -15,7 +15,7 @@ end
 
 compile '/' do
   filter :erb
-  filter :kramdown, :toc_levels => [2]
+  filter :redcarpet, :toc_levels => [2]
   filter :colorize_syntax,
     :colorizers => {:javascript => :pygmentsrb}
   layout 'default'
@@ -26,12 +26,12 @@ end
 
 compile '/feed/' do
   filter :erb
-  filter :kramdown, :toc_levels => [2]
+  filter :redcarpet, :toc_levels => [2]
 end
 
 compile '/developer/*' do
   filter :erb
-  filter :kramdown, :toc_levels => [2]
+  filter :redcarpet, :toc_levels => [2], :options => {:fenced_code_blocks => true}
   filter :colorize_syntax,
     :colorizers => {:javascript => :pygmentsrb,
                     :ruby       => :pygmentsrb}
@@ -41,7 +41,7 @@ end
 
 compile '/api/v1/*' do
   filter :erb
-  filter :kramdown, :toc_levels => [2]
+  filter :redcarpet, :toc_levels => [2]
   filter :colorize_syntax,
     :colorizers => {:javascript => :pygmentsrb}
   layout 'api/v1/default'
@@ -49,7 +49,7 @@ end
 
 compile '/api/' do
   filter :erb
-  filter :kramdown, :toc_levels => [2]
+  filter :redcarpet, :toc_levels => [2]
   layout 'home' 
 end
 
