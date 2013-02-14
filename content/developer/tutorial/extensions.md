@@ -152,7 +152,9 @@ First, create the required views directory with the following command:
 
 Next, create the file `app/views/spree/home/sale.html.erb` and add the following content to it:
 
-**TODO**: Fix view for nanoc, it doesn't seem to like the hash in the render call
+    <div data-hook="homepage_products">
+      <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+    </div>
 
 If you navigate to `http://localhost:3000/sale` you should now see the product(s) listed that we set a `sale_price` on earlier in the tutorial. However, if you look at the price, you'll notice that it's not actually displaying the correct price. This is easy enough to fix and we will cover that in the next section.
 
