@@ -89,6 +89,7 @@ module Spree
       LINKS[:core] = "/developer/core/"
       LINKS[:products] = LINKS[:core] + "products"
       LINKS[:variants] = LINKS[:products] + "#variants"
+      LINKS[:prices] = LINKS[:core] + "#prices"
       LINKS[:orders] = LINKS[:core] + "orders"
       LINKS[:line_items] = LINKS[:orders] + "#line-items"
       LINKS[:adjustments] = LINKS[:core] + "adjustments"
