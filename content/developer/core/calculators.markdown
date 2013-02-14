@@ -182,6 +182,18 @@ defined for brevity):
     config.spree.calculators.tax_rates << CustomCalculator
     config.spree.calculators.promotion_actions_create_adjustments << CustomCalculator
 
+### Determining availability
+
+By default, all shipping method calculators are available at all times. If you
+wish to make this dependent on something from the order, you can re-define the
+`available?` method inside your calculator:
+
+    class CustomCalculator < Spree::Calculator
+      def available?(object)
+        object.currency == "USD"
+      end
+    end
+
 ## Calculated Adjustments
 
 If you wish to use Spree's calculator functionality for your own application,
