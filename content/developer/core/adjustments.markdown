@@ -14,7 +14,17 @@ value are sometimes referred to as “credits.” These are just terms of
 convenience since there is only one Spree::Adjustment model in Spree which
 handles this by allowing either positive or negative values.
 
-An adjustment links three separate components together:
+Adjustments have the following attributes:
+
+* `amount` The dollar amount of the adjustment.
+* `label`: The label for the adjustment to indicate what the adjustment is for.
+* `mandatory`: Indicates if this adjustment is mandatory.
+* `eligible`: Indicates if the adjustment is eligible for the thing it's
+  adjusting.
+* `state`: Can either be "open", "closed"
+  or "finalized". Once it is in the "finalized" state, it cannot be changed.
+
+Along with these attributes, an adjustment links to three polymorphic objects:
 
 * A source
 * An adjustable
