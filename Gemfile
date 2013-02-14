@@ -1,7 +1,8 @@
 source "http://rubygems.org"
 
 gem 'builder'
-gem 'redcarpet'
+gem 'coderay'
+gem 'kramdown'
 gem 'mime-types'
 gem 'nanoc'
 gem 'nokogiri'

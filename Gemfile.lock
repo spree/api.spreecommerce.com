@@ -18,6 +18,7 @@ GEM
     eventmachine (1.0.0)
     fssm (0.2.9)
     highline (1.6.15)
+    kramdown (0.14.0)
     method_source (0.8.1)
     mime-types (1.19)
     nanoc (3.4.2)
@@ -40,7 +41,6 @@ GEM
       yajl-ruby (~> 1.1.0)
     rack (1.4.1)
     rake (10.0.1)
-    redcarpet (2.0.1)
     slop (3.4.3)
     thin (1.5.0)
       daemons (>= 1.0.9)
@@ -55,13 +55,14 @@ DEPENDENCIES
   adsf
   builder
   capistrano
+  coderay
   fssm
+  kramdown
   mime-types
   nanoc
   nokogiri
   pry
   pygments.rb
   rake
-  redcarpet
   thin
   yajl-ruby
