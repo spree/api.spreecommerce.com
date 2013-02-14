@@ -47,6 +47,10 @@ compile '/api/v1/*' do
   layout 'api/v1/default'
 end
 
+route '/static/*' do
+  item.identifier[7..-2]
+end
+
 route '*' do
   item.identifier + 'index.html'
 end
