@@ -156,5 +156,71 @@ TODO: Verify these preferences are correct. I am not confident.
   isn't full applied.
 * `discount_amount`: The discount amount to apply.
 
+## Creating a new calculator
+
+To create a new calculator for Spree, you need to do two things. The first is to
+inherit from the `Spree::Calculator` class and define `description` and
+`compute` methods on that class:
+
+    class CustomCalculator < Spree::Calculator
+      def self.description
+        # Human readable description of the calculator
+      end
+
+      def compute(object=nil)
+        # Returns the value after performing the required calculation
+      end
+    end
+
+You can register this calculator as a tax, shipping, or promotion adjustment
+calculator by calling code like this at the end of
+`config/initializers/spree.rb` inside your application (`config` variable
+defined for brevity):
+
+    config = Rails.application.config
+    config.spree.calculators.shipping_methods << CustomCalculator
+    config.spree.calculators.tax_rates << CustomCalculator
+    config.spree.calculators.promotion_actions_create_adjustments << CustomCalculator
+
+## Calculated Adjustments
+
+If you wish to use Spree's calculator functionality for your own application,
+you can include the `Spree::Core::CalculatedAdjustments` module into a model of
+your choosing.
+
+    class Plan < ActiveRecord::Base
+      include Spree::Core::CalculatedAdjustments
+    end
+
+To have calculators available for this class, you will need to register them:
+
+    config.spree.calculators.plans << CustomCalculator
+
+Then you can access these calculators by calling this method:
+
+    Plan.calculators
+
+Using this method, you can then display the calculators as you please. Each
+object for this new class will need to have a calculator associated so that
+adjustments can be calculated on them.
+
+This module provides a `has_one` association to a `calculator` object, as well
+as some convenience helpers for creating and updating adjustments for objects.
+Assuming that an object has a calculator associated with it first, creating an
+adjustment is simple:
+
+    plan.create_adjustment("#{plan.name}", <target object>, <calculable object>)
+
+To update this adjustment:
+
+    plan.update_adjustment(<adjustment object>, <calculable object>)
+
+To work out what the calculator would compute an amount to be:
+
+    plan.compute_amount(<calculable object>)
+
+`create_adjustment`, `update_adjustment` and `compute_amount` will call `compute` on
+the `calculator` object. This calcualable amount is whatever object your
+`CustomCalculator` class supports.
 
 
