@@ -30,6 +30,7 @@ compile '/feed/' do
 end
 
 compile '/developer/*' do
+  filter :parse_info_boxes
   filter :erb
   filter :kramdown, :toc_levels => [2]
   filter :colorize_syntax,

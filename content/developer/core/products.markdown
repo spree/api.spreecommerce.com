@@ -165,8 +165,8 @@ can contain many (or no) sub / child taxons.  Store administrators can define as
 many Taxonomies as required, and link a product to multiple Taxons from each
 Taxonomy.
 
-<% note do %>
+***
   By default, both Taxons and Taxonomies are ordered by their `position`
   attribute.
-<% end %>
+***
 
