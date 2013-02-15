@@ -4,7 +4,7 @@ class FencedCodeBlocks < Nanoc::Filter
 
   def run(content, params={})
     content = content.gsub(/^```\s?(.*?)\n(.*?)```/m) do
-      "~~~#{$1}\n" +
+      "~~~ #{$1}\n" +
       "#{$2}\n" +
       "~~~"
     end
