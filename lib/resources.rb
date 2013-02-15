@@ -94,6 +94,7 @@ module Spree
       LINKS[:line_items] = LINKS[:orders] + "#line-items"
       LINKS[:adjustments] = LINKS[:core] + "adjustments"
       LINKS[:payments] = LINKS[:core] + "payments"
+      LINKS[:calculators] = LINKS[:core] + "calculators"
 
       def warning(message)
         %(<div class='warning'>) + message + %(</div>)
