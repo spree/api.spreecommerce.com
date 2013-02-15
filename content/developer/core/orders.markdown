@@ -68,6 +68,11 @@ The "Complete" state can only be reached in one of two states:
 2. Payment is required on the order, and at least the order total has been
 received as payment.
 
+Assuming that an order meets the criteria for the next state, you will be able
+to transition it to the next state by calling `next` on that object. If this
+returns `false`, then the order does *not* meet the criteria. To work out why it
+cannot transition, check the result of an `errors` method call.
+
 ## Line Items
 
 Line items are used to keep track of items within the context of an order.
