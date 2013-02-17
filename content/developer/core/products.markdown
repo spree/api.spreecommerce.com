@@ -170,3 +170,10 @@ Taxonomy.
   attribute.
 ***
 
+***
+  Taxons use the [Nested set
+model](http://en.wikipedia.org/wiki/Nested_set_model) for their heirarchy. The
+`lft` and `rgt` columns in the `spree_taxons` table represent the locations
+within the heirarchy of the item.
+***
+
