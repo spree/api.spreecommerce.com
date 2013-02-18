@@ -1,5 +1,6 @@
 ---
   title: "Deploying to Heroku"
+  has_toc: true
 ---
 
 ## Deploying to Heroku
