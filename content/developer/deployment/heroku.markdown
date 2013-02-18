@@ -84,9 +84,7 @@ end
 Once you have configured the above settings, you can push your Spree application
 to Heroku:
 
-```shell
-git push heroku master
-```
+    git push heroku master
 
 ## SSL Support
 
