@@ -174,6 +174,7 @@ Taxonomy.
   Taxons use the [Nested set
 model](http://en.wikipedia.org/wiki/Nested_set_model) for their heirarchy. The
 `lft` and `rgt` columns in the `spree_taxons` table represent the locations
-within the heirarchy of the item.
+within the heirarchy of the item. This logic is handled by the
+[awesome_nested_set](https://github.com/collectiveidea/awesome_nested_set) gem.
 ***
 
