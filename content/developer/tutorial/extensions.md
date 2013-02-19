@@ -173,8 +173,8 @@ module Spree
   Variant.class_eval do
     alias_method :orig_price_in, :price_in    
     def price_in(currency)
-      return orig_price_in(currency) unless product.master.sale_price.present?
-      Spree::Price.new(:variant_id => self.id, :amount => product.master.sale_price, :currency => currency)
+      return orig_price_in(currency) unless sale_price.present?
+      Spree::Price.new(:variant_id => self.id, :amount => self.sale_price, :currency => currency)
     end
   end
 end
@@ -207,7 +207,39 @@ Great! We're ready to start adding some tests. Let's replicate the extension's d
 
 `mkdir -p spec/models/spree`
 
-Now, let's create a new file in this directory called `variant_decorator_spec.rb` and add the following test to it:
+Now, let's create a new file in this directory called `variant_decorator_spec.rb` and add the following tests to it:
+
+```
+require 'spec_helper'
+
+describe Spree::Variant do
+  describe "#price_in" do
+    it "returns the sale price if it is present" do
+      variant = create(:variant, :sale_price => 8.00)
+      expected = Spree::Price.new(:variant_id => variant.id, :currency => "USD", :amount => variant.sale_price)
+
+      result = variant.price_in("USD")
+
+      result.variant_id.should == expected.variant_id
+      result.amount.to_f.should == expected.amount.to_f
+      result.currency.should == expected.currency
+    end
+
+    it "returns the normal price if it is not on sale" do
+      variant = create(:variant, :price => 15.00)
+      expected = Spree::Price.new(:variant_id => variant.id, :currency => "USD", :amount => variant.price)
+
+      result = variant.price_in("USD")
+
+      result.variant_id.should == expected.variant_id
+      result.amount.to_f.should == expected.amount.to_f
+      result.currency.should == expected.currency
+    end
+  end
+end
+```
+
+These specs test that the `price_in` method we overrode in our `VariantDecorator` returns the correct price both when the sale price is present and when it is not.
 
 ## Summary
 
