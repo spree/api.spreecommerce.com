@@ -116,9 +116,19 @@ To create a new variant for a product, make this request with the necessary para
 
     POST /api/products/1/variants
 
-For instance, a request to create a new variant with a SKU of 12345 and a price of 19.99 would look like this::
+For instance, a request to create a new variant with a SKU of 12345 and a price of 19.99 would look like this:
 
     POST /api/products/1/variants/?variant[sku]=12345&variant[price]=19.99
+
+It is also possible to add option_values when creating a variant.  One way is to add an array of option_values, like this :
+
+	POST /api/products/1/variants?variant[price]=10.50&variant[option_values][][option_value][id]=9&variant[option_values][][option_value][id]=4
+
+Or you can also set option_value_ids. (Variants controller will change option_values params to option_value_ids before creating a variant.)
+
+	POST /api/products/1/variants?variant[price]=10.50&variant[option_value_ids][]=9&variant[option_value_ids][]=4
+
+
 
 ### Successful response
 
@@ -144,6 +154,15 @@ To update a variant\'s details, make this request with the necessary parameters:
 For instance, to update a variant\'s SKU, send it through like this:
 
     PUT /api/products/1/variants/2?variant[sku]=12345
+
+It is also possible to add option_values when updating a variant.  One way is to add an array of option_values, like this :
+
+	PUT /api/products/1/variants?variant[price]=10.50&variant[option_values][][option_value][id]=9&variant[option_values][][option_value][id]=4
+
+Or you can also set option_value_ids. (Variants controller will change option_values params to option_value_ids before updating a variant.)
+
+	PUT /api/products/1/variants?variant[price]=10.50&variant[option_value_ids][]=9&variant[option_value_ids][]=4
+
 
 ### Successful response
 
